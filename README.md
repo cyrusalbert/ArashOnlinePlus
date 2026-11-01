@@ -4,6 +4,29 @@ Fetches every subscription listed in `sourcelist.txt`, tests all configs with **
 and publishes filtered, renamed and sorted lists. A GitHub Actions workflow repeats the whole
 cycle every 6 hours and commits the results.
 
+## Sublinks
+
+```
+https://raw.githubusercontent.com/USER/REPO/main/arashonline.txt#arashonline
+```
+```
+https://raw.githubusercontent.com/USER/REPO/main/arashonline-top50speed.txt#arashonline-top50speed
+```
+```
+https://raw.githubusercontent.com/USER/REPO/main/arashonline-highspeed.txt#arashonline-highspeed
+```
+```
+https://raw.githubusercontent.com/USER/REPO/main/arashonline-top50ping.txt#arashonline-top50ping
+```
+```
+https://raw.githubusercontent.com/USER/REPO/main/arashonline-highvalue.txt#arashonline-highvalue
+```
+```
+https://raw.githubusercontent.com/USER/REPO/main/arashonline-BestLoc.txt#arashonline-BestLoc
+```
+
+
+
 ## Pipeline
 
 1. Read `sourcelist.txt`, download all subscriptions (plain or base64), parse
