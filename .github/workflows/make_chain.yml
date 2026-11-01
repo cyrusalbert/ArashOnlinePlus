@@ -1,0 +1,62 @@
+name: Update configs
+
+on:
+  schedule:
+    - cron: "0 */6 * * *"   # every 6 hours (UTC)
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+# Never run two cycles at once; a late cycle waits instead of being cancelled.
+concurrency:
+  group: update-configs
+  cancel-in-progress: false
+
+jobs:
+  update:
+    # ubuntu-latest by default. To test from your own network, register a self-hosted runner
+    # and set the repository variable RUNNER_LABEL (for example to "self-hosted").
+    runs-on: ${{ vars.RUNNER_LABEL || 'ubuntu-latest' }}
+    timeout-minutes: 330
+    env:
+      XRAY_VERSION: ${{ vars.XRAY_VERSION || 'latest' }}
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-go@v5
+        with:
+          go-version: stable
+          cache: false
+
+      - name: Install Xray-core
+        run: bash scripts/install-xray.sh ./xray
+
+      - name: Build
+        run: go build -trimpath -o arashonline-bin .
+
+      - name: Test, filter and rank configs
+        run: ./arashonline-bin -xray ./xray/xray
+        env:
+          # Optional: private subscription URLs (one per line) kept out of the repository.
+          EXTRA_SOURCES: ${{ secrets.EXTRA_SOURCES }}
+
+      # Entry x exit chains (needs entrylist.txt). A failure here must not block publishing the lists.
+      - name: Build chained configs
+        continue-on-error: true
+        run: python3 scripts/make_chain.py
+
+      - name: Commit results
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          for f in arashonline*.txt arashonline-chain.json; do
+            if [ -f "$f" ]; then git add "$f"; fi
+          done
+          if git diff --cached --quiet; then
+            echo "No changes to commit"
+          else
+            git commit -m "chore: refresh configs $(date -u +'%Y-%m-%d %H:%M UTC')"
+            git pull --rebase --autostash origin "${GITHUB_REF_NAME}"
+            git push origin "HEAD:${GITHUB_REF_NAME}"
+          fi
