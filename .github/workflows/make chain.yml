@@ -7,7 +7,8 @@ on:
 
 jobs:
   build:
-    runs-on permissions:
+    runs-on: ubuntu-latest
+    permissions:
       contents: write
     steps:
       - name: Checkout
@@ -22,9 +23,8 @@ jobs:
         run: python chain_gen.py
 
       - name: Commit output
-        run: |
-          git config user.name "github-actions[bot]"
-          git config user.email "github-actions[bot]@users.nply.github.com"
+ config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
           git add arashonline-chain.json
           git diff --cached --quiet || git commit -m "update chain configs"
           git push
