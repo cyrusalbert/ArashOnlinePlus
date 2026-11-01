@@ -4,3 +4,4 @@
 # https://example.com/sub/your-token
 # https://raw.githubusercontent.com/USER/REPO/main/configs.txt
 # vless://uuid@host:443?security=tls&type=ws&path=%2F#my-config
+https://raw.githubusercontent.com/4n0nymou3/multi-proxy-config-fetcher/refs/heads/main/configs/proxy_configs_tested.txt
