@@ -54,11 +54,6 @@ One config per country, chosen by a balanced score of ping and speed. Best when 
 https://raw.githubusercontent.com/cyrusalbert/ArashOnlinePlus/main/arashonline-BestLoc.txt#ArashOnlinePlus-BestLoc
 ```
 
-### 🔗 ArashOnline-Chain
-```
-https://raw.githubusercontent.com/cyrusalbert/ArashOnlinePlus/refs/heads/main/arashonline-chain.json#ArashOnline-Chain
-```
-
 
 ### 🧭 Which one should I use?
 
