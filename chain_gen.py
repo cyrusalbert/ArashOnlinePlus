@@ -125,10 +125,13 @@ def parse_link(link):
 
 def parse_file(path):
     parsed = []
-    for line in read_lines(path):
-        c = parse_link(line)
-        if c:
-            parsed.append(c)
+    for i, line in enumerate(read_lines(path), 1):
+        try:
+            c = parse_link(line)
+            if c:
+                parsed.append(c)
+        except Exception as ex:
+            print(f"Skipped line {i}: {ex}")
     return parsed
 
 # ---------- geo lookup ----------
