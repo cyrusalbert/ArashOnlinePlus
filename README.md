@@ -21,37 +21,37 @@ Copy a link, then add it as a subscription in your client. Pick the list that fi
 ### 📦 ArashOnline: everything
 All verified configs, sorted by ping from lowest to highest. The best general-purpose choice.
 ```
-https://raw.githubusercontent.com/cyrusalbert/ArashOnlinePlus/main/arashonline.txt#ArashOnline
+https://raw.githubusercontent.com/cyrusalbert/ArashOnlinePlus/main/arashonline.txt#ArashOnlinePlus
 ```
 
 ### 🚀 ArashOnline-top50speed: fastest 50
 The 50 configs with the highest download speed. Best for large downloads and streaming.
 ```
-https://raw.githubusercontent.com/cyrusalbert/ArashOnlinePlus/main/arashonline-top50speed.txt#ArashOnline-top50speed
+https://raw.githubusercontent.com/cyrusalbert/ArashOnlinePlus/main/arashonline-top50speed.txt#ArashOnlinePlus-top50speed
 ```
 
 ### ⚡ ArashOnline-highspeed: high-speed 50
 The same 50 fastest configs as above, kept under a second name for clients and setups that already use it.
 ```
-https://raw.githubusercontent.com/cyrusalbert/ArashOnlinePlus/main/arashonline-highspeed.txt#ArashOnline-highspeed
+https://raw.githubusercontent.com/cyrusalbert/ArashOnlinePlus/main/arashonline-highspeed.txt#ArashOnlinePlus-highspeed
 ```
 
 ### 🎯 ArashOnline-top50ping: lowest latency 50
 The 50 configs with the lowest ping. Best for gaming, calls and everyday browsing.
 ```
-https://raw.githubusercontent.com/cyrusalbert/ArashOnlinePlus/main/arashonline-top50ping.txt#ArashOnline-top50ping
+https://raw.githubusercontent.com/cyrusalbert/ArashOnlinePlus/main/arashonline-top50ping.txt#ArashOnlinePlus-top50ping
 ```
 
 ### 💎 ArashOnline-highvalue: fast and responsive
 Only configs with ping between 0 and 200 ms **and** speed above 800 Mbps. A short list, but the best of both worlds.
 ```
-https://raw.githubusercontent.com/cyrusalbert/ArashOnlinePlus/main/arashonline-highvalue.txt#ArashOnline-highvalue
+https://raw.githubusercontent.com/cyrusalbert/ArashOnlinePlus/main/arashonline-highvalue.txt#ArashOnlinePlus-highvalue
 ```
 
 ### 🌍 ArashOnline-BestLoc: best config per country
 One config per country, chosen by a balanced score of ping and speed. Best when you need a specific location.
 ```
-https://raw.githubusercontent.com/cyrusalbert/ArashOnlinePlus/main/arashonline-BestLoc.txt#ArashOnline-BestLoc
+https://raw.githubusercontent.com/cyrusalbert/ArashOnlinePlus/main/arashonline-BestLoc.txt#ArashOnlinePlus-BestLoc
 ```
 
 ### 🧭 Which one should I use?
