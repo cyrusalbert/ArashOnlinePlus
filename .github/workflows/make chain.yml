@@ -1,0 +1,30 @@
+name: make chain
+
+on:
+  schedule:
+    - cron: "0 6 * * *"   # daily at 06:00 UTC
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on permissions:
+      contents: write
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Generate chain configs
+        run: python chain_gen.py
+
+      - name: Commit output
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.nply.github.com"
+          git add arashonline-chain.json
+          git diff --cached --quiet || git commit -m "update chain configs"
+          git push
