@@ -1,0 +1,7377 @@
+{
+  "configs": [
+    {
+      "name": "🇺🇸 -> 🇺🇸 185.215.132.9 Atlanta SS",
+      "config": {
+        "log": {
+          "loglevel": "warning"
+        },
+        "inbounds": [
+          {
+            "tag": "socks-in",
+            "listen": "127.0.0.1",
+            "port": 10808,
+            "protocol": "socks",
+            "settings": {
+              "auth": "noauth",
+              "udp": true
+            }
+          }
+        ],
+        "outbounds": [
+          {
+            "protocol": "shadowsocks",
+            "settings": {
+              "servers": [
+                {
+                  "address": "185.215.132.9",
+                  "port": 19999,
+                  "method": "aes-256-gcm",
+                  "password": "ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4="
+                }
+              ]
+            },
+            "tag": "exit-hop",
+            "streamSettings": {
+              "sockopt": {
+                "dialerProxy": "entry-hop"
+              }
+            }
+          },
+          {
+            "protocol": "trojan",
+            "settings": {
+              "servers": [
+                {
+                  "address": "170.101.101.112",
+                  "port": 443,
+                  "password": "0ab6c98dae3b48e8b9c4a776b6c9c19a"
+                }
+              ]
+            },
+            "streamSettings": {
+              "network": "tcp",
+              "security": "tls",
+              "tlsSettings": {
+                "serverName": "resources.explorecreativejobsandenhanceyourcareerportfolio.com",
+                "fingerprint": "chrome"
+              }
+            },
+            "tag": "entry-hop"
+          },
+          {
+            "protocol": "freedom",
+            "tag": "direct"
+          }
+        ],
+        "routing": {
+          "rules": [
+            {
+              "type": "field",
+              "outboundTag": "direct",
+              "ip": [
+                "geoip:private"
+              ]
+            }
+          ]
+        }
+      }
+    },
+    {
+      "name": "🇺🇸 -> 🇲🇽 216.238.80.100 Querétaro City TR",
+      "config": {
+        "log": {
+          "loglevel": "warning"
+        },
+        "inbounds": [
+          {
+            "tag": "socks-in",
+            "listen": "127.0.0.1",
+            "port": 10808,
+            "protocol": "socks",
+            "settings": {
+              "auth": "noauth",
+              "udp": true
+            }
+          }
+        ],
+        "outbounds": [
+          {
+            "protocol": "trojan",
+            "settings": {
+              "servers": [
+                {
+                  "address": "216.238.80.100",
+                  "port": 443,
+                  "password": "0ab6c98dae3b48e8b9c4a776b6c9c19a"
+                }
+              ]
+            },
+            "streamSettings": {
+              "network": "tcp",
+              "security": "tls",
+              "tlsSettings": {
+                "serverName": "connectwithtopemployersandfindidealjobs.com",
+                "fingerprint": "chrome"
+              },
+              "sockopt": {
+                "dialerProxy": "entry-hop"
+              }
+            },
+            "tag": "exit-hop"
+          },
+          {
+            "protocol": "trojan",
+            "settings": {
+              "servers": [
+                {
+                  "address": "170.101.101.112",
+                  "port": 443,
+                  "password": "0ab6c98dae3b48e8b9c4a776b6c9c19a"
+                }
+              ]
+            },
+            "streamSettings": {
+              "network": "tcp",
+              "security": "tls",
+              "tlsSettings": {
+                "serverName": "resources.explorecreativejobsandenhanceyourcareerportfolio.com",
+                "fingerprint": "chrome"
+              }
+            },
+            "tag": "entry-hop"
+          },
+          {
+            "protocol": "freedom",
+            "tag": "direct"
+          }
+        ],
+        "routing": {
+          "rules": [
+            {
+              "type": "field",
+              "outboundTag": "direct",
+              "ip": [
+                "geoip:private"
+              ]
+            }
+          ]
+        }
+      }
+    },
+    {
+      "name": "🇺🇸 -> 🇬🇧 185.176.206.9 City of London SS",
+      "config": {
+        "log": {
+          "loglevel": "warning"
+        },
+        "inbounds": [
+          {
+            "tag": "socks-in",
+            "listen": "127.0.0.1",
+            "port": 10808,
+            "protocol": "socks",
+            "settings": {
+              "auth": "noauth",
+              "udp": true
+            }
+          }
+        ],
+        "outbounds": [
+          {
+            "protocol": "shadowsocks",
+            "settings": {
+              "servers": [
+                {
+                  "address": "185.176.206.9",
+                  "port": 19999,
+                  "method": "aes-256-gcm",
+                  "password": "ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4="
+                }
+              ]
+            },
+            "tag": "exit-hop",
+            "streamSettings": {
+              "sockopt": {
+                "dialerProxy": "entry-hop"
+              }
+            }
+          },
+          {
+            "protocol": "trojan",
+            "settings": {
+              "servers": [
+                {
+                  "address": "170.101.101.112",
+                  "port": 443,
+                  "password": "0ab6c98dae3b48e8b9c4a776b6c9c19a"
+                }
+              ]
+            },
+            "streamSettings": {
+              "network": "tcp",
+              "security": "tls",
+              "tlsSettings": {
+                "serverName": "resources.explorecreativejobsandenhanceyourcareerportfolio.com",
+                "fingerprint": "chrome"
+              }
+            },
+            "tag": "entry-hop"
+          },
+          {
+            "protocol": "freedom",
+            "tag": "direct"
+          }
+        ],
+        "routing": {
+          "rules": [
+            {
+              "type": "field",
+              "outboundTag": "direct",
+              "ip": [
+                "geoip:private"
+              ]
+            }
+          ]
+        }
+      }
+    },
+    {
+      "name": "🇺🇸 -> 🇩🇪 jdwabxe.cvewfjg.shop Unknown VL",
+      "config": {
+        "log": {
+          "loglevel": "warning"
+        },
+        "inbounds": [
+          {
+            "tag": "socks-in",
+            "listen": "127.0.0.1",
+            "port": 10808,
+            "protocol": "socks",
+            "settings": {
+              "auth": "noauth",
+              "udp": true
+            }
+          }
+        ],
+        "outbounds": [
+          {
+            "protocol": "vless",
+            "settings": {
+              "vnext": [
+                {
+                  "address": "jdwabxe.cvewfjg.shop",
+                  "port": 443,
+                  "users": [
+                    {
+                      "id": "711c018e-2692-4aa8-93f3-544d83fcd16c",
+                      "flow": "xtls-rprx-vision"
+                    }
+                  ]
+                }
+              ]
+            },
+            "streamSettings": {
+              "network": "raw",
+              "security": "reality",
+              "realitySettings": {
+                "serverName": "www.cloudflare.com",
+                "fingerprint": "chrome",
+                "publicKey": "HyVSZ2OyySwXT-xRhTAqoiuYflIaj_b0Jxm7S1Iq9hs"
+              },
+              "sockopt": {
+                "dialerProxy": "entry-hop"
+              }
+            },
+            "tag": "exit-hop"
+          },
+          {
+            "protocol": "trojan",
+            "settings": {
+              "servers": [
+                {
+                  "address": "170.101.101.112",
+                  "port": 443,
+                  "password": "0ab6c98dae3b48e8b9c4a776b6c9c19a"
+                }
+              ]
+            },
+            "streamSettings": {
+              "network": "tcp",
+              "security": "tls",
+              "tlsSettings": {
+                "serverName": "resources.explorecreativejobsandenhanceyourcareerportfolio.com",
+                "fingerprint": "chrome"
+              }
+            },
+            "tag": "entry-hop"
+          },
+          {
+            "protocol": "freedom",
+            "tag": "direct"
+          }
+        ],
+        "routing": {
+          "rules": [
+            {
+              "type": "field",
+              "outboundTag": "direct",
+              "ip": [
+                "geoip:private"
+              ]
+            }
+          ]
+        }
+      }
+    },
+    {
+      "name": "🇺🇸 -> 🇵🇱 70.34.252.255 Warsaw TR",
+      "config": {
+        "log": {
+          "loglevel": "warning"
+        },
+        "inbounds": [
+          {
+            "tag": "socks-in",
+            "listen": "127.0.0.1",
+            "port": 10808,
+            "protocol": "socks",
+            "settings": {
+              "auth": "noauth",
+              "udp": true
+            }
+          }
+        ],
+        "outbounds": [
+          {
+            "protocol": "trojan",
+            "settings": {
+              "servers": [
+                {
+                  "address": "70.34.252.255",
+                  "port": 443,
+                  "password": "0ab6c98dae3b48e8b9c4a776b6c9c19a"
+                }
+              ]
+            },
+            "streamSettings": {
+              "network": "tcp",
+              "security": "tls",
+              "tlsSettings": {
+                "serverName": "browseexecutivejobopeningsandenhanceleadershipcareer.com",
+                "fingerprint": "chrome"
+              },
+              "sockopt": {
+                "dialerProxy": "entry-hop"
+              }
+            },
+            "tag": "exit-hop"
+          },
+          {
+            "protocol": "trojan",
+            "settings": {
+              "servers": [
+                {
+                  "address": "170.101.101.112",
+                  "port": 443,
+                  "password": "0ab6c98dae3b48e8b9c4a776b6c9c19a"
+                }
+              ]
+            },
+            "streamSettings": {
+              "network": "tcp",
+              "security": "tls",
+              "tlsSettings": {
+                "serverName": "resources.explorecreativejobsandenhanceyourcareerportfolio.com",
+                "fingerprint": "chrome"
+              }
+            },
+            "tag": "entry-hop"
+          },
+          {
+            "protocol": "freedom",
+            "tag": "direct"
+          }
+        ],
+        "routing": {
+          "rules": [
+            {
+              "type": "field",
+              "outboundTag": "direct",
+              "ip": [
+                "geoip:private"
+              ]
+            }
+          ]
+        }
+      }
+    },
+    {
+      "name": "🇺🇸 -> 🇨🇱 64.176.7.205 Santiago TR",
+      "config": {
+        "log": {
+          "loglevel": "warning"
+        },
+        "inbounds": [
+          {
+            "tag": "socks-in",
+            "listen": "127.0.0.1",
+            "port": 10808,
+            "protocol": "socks",
+            "settings": {
+              "auth": "noauth",
+              "udp": true
+            }
+          }
+        ],
+        "outbounds": [
+          {
+            "protocol": "trojan",
+            "settings": {
+              "servers": [
+                {
+                  "address": "64.176.7.205",
+                  "port": 443,
+                  "password": "0ab6c98dae3b48e8b9c4a776b6c9c19a"
+                }
+              ]
+            },
+            "streamSettings": {
+              "network": "tcp",
+              "security": "tls",
+              "tlsSettings": {
+                "serverName": "advanceyouremploymentskillsandcareerdevelopmenthub.com",
+                "fingerprint": "chrome"
+              },
+              "sockopt": {
+                "dialerProxy": "entry-hop"
+              }
+            },
+            "tag": "exit-hop"
+          },
+          {
+            "protocol": "trojan",
+            "settings": {
+              "servers": [
+                {
+                  "address": "170.101.101.112",
+                  "port": 443,
+                  "password": "0ab6c98dae3b48e8b9c4a776b6c9c19a"
+                }
+              ]
+            },
+            "streamSettings": {
+              "network": "tcp",
+              "security": "tls",
+              "tlsSettings": {
+                "serverName": "resources.explorecreativejobsandenhanceyourcareerportfolio.com",
+                "fingerprint": "chrome"
+              }
+            },
+            "tag": "entry-hop"
+          },
+          {
+            "protocol": "freedom",
+            "tag": "direct"
+          }
+        ],
+        "routing": {
+          "rules": [
+            {
+              "type": "field",
+              "outboundTag": "direct",
+              "ip": [
+                "geoip:private"
+              ]
+            }
+          ]
+        }
+      }
+    },
+    {
+      "name": "🇺🇸 -> 🇳🇱 193.29.139.223 Amsterdam SS",
+      "config": {
+        "log": {
+          "loglevel": "warning"
+        },
+        "inbounds": [
+          {
+            "tag": "socks-in",
+            "listen": "127.0.0.1",
+            "port": 10808,
+            "protocol": "socks",
+            "settings": {
+              "auth": "noauth",
+              "udp": true
+            }
+          }
+        ],
+        "outbounds": [
+          {
+            "protocol": "shadowsocks",
+            "settings": {
+              "servers": [
+                {
+                  "address": "193.29.139.223",
+                  "port": 8080,
+                  "method": "chacha20-ietf-poly1305",
+                  "password": "k1dBOmOB4oqi7Ump37a1bQ"
+                }
+              ]
+            },
+            "tag": "exit-hop",
+            "streamSettings": {
+              "sockopt": {
+                "dialerProxy": "entry-hop"
+              }
+            }
+          },
+          {
+            "protocol": "trojan",
+            "settings": {
+              "servers": [
+                {
+                  "address": "170.101.101.112",
+                  "port": 443,
+                  "password": "0ab6c98dae3b48e8b9c4a776b6c9c19a"
+                }
+              ]
+            },
+            "streamSettings": {
+              "network": "tcp",
+              "security": "tls",
+              "tlsSettings": {
+                "serverName": "resources.explorecreativejobsandenhanceyourcareerportfolio.com",
+                "fingerprint": "chrome"
+              }
+            },
+            "tag": "entry-hop"
+          },
+          {
+            "protocol": "freedom",
+            "tag": "direct"
+          }
+        ],
+        "routing": {
+          "rules": [
+            {
+              "type": "field",
+              "outboundTag": "direct",
+              "ip": [
+                "geoip:private"
+              ]
+            }
+          ]
+        }
+      }
+    },
+    {
+      "name": "🇺🇸 -> 🇦🇹 82.110.60.9 London SS",
+      "config": {
+        "log": {
+          "loglevel": "warning"
+        },
+        "inbounds": [
+          {
+            "tag": "socks-in",
+            "listen": "127.0.0.1",
+            "port": 10808,
+            "protocol": "socks",
+            "settings": {
+              "auth": "noauth",
+              "udp": true
+            }
+          }
+        ],
+        "outbounds": [
+          {
+            "protocol": "shadowsocks",
+            "settings": {
+              "servers": [
+                {
+                  "address": "82.110.60.9",
+                  "port": 19999,
+                  "method": "aes-256-gcm",
+                  "password": "ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4="
+                }
+              ]
+            },
+            "tag": "exit-hop",
+            "streamSettings": {
+              "sockopt": {
+                "dialerProxy": "entry-hop"
+              }
+            }
+          },
+          {
+            "protocol": "trojan",
+            "settings": {
+              "servers": [
+                {
+                  "address": "170.101.101.112",
+                  "port": 443,
+                  "password": "0ab6c98dae3b48e8b9c4a776b6c9c19a"
+                }
+              ]
+            },
+            "streamSettings": {
+              "network": "tcp",
+              "security": "tls",
+              "tlsSettings": {
+                "serverName": "resources.explorecreativejobsandenhanceyourcareerportfolio.com",
+                "fingerprint": "chrome"
+              }
+            },
+            "tag": "entry-hop"
+          },
+          {
+            "protocol": "freedom",
+            "tag": "direct"
+          }
+        ],
+        "routing": {
+          "rules": [
+            {
+              "type": "field",
+              "outboundTag": "direct",
+              "ip": [
+                "geoip:private"
+              ]
+            }
+          ]
+        }
+      }
+    },
+    {
+      "name": "🇺🇸 -> 🇮🇹 185.164.175.81 Milan SS",
+      "config": {
+        "log": {
+          "loglevel": "warning"
+        },
+        "inbounds": [
+          {
+            "tag": "socks-in",
+            "listen": "127.0.0.1",
+            "port": 10808,
+            "protocol": "socks",
+            "settings": {
+              "auth": "noauth",
+              "udp": true
+            }
+          }
+        ],
+        "outbounds": [
+          {
+            "protocol": "shadowsocks",
+            "settings": {
+              "servers": [
+                {
+                  "address": "185.164.175.81",
+                  "port": 19999,
+                  "method": "aes-256-gcm",
+                  "password": "ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4="
+                }
+              ]
+            },
+            "tag": "exit-hop",
+            "streamSettings": {
+              "sockopt": {
+                "dialerProxy": "entry-hop"
+              }
+            }
+          },
+          {
+            "protocol": "trojan",
+            "settings": {
+              "servers": [
+                {
+                  "address": "170.101.101.112",
+                  "port": 443,
+                  "password": "0ab6c98dae3b48e8b9c4a776b6c9c19a"
+                }
+              ]
+            },
+            "streamSettings": {
+              "network": "tcp",
+              "security": "tls",
+              "tlsSettings": {
+                "serverName": "resources.explorecreativejobsandenhanceyourcareerportfolio.com",
+                "fingerprint": "chrome"
+              }
+            },
+            "tag": "entry-hop"
+          },
+          {
+            "protocol": "freedom",
+            "tag": "direct"
+          }
+        ],
+        "routing": {
+          "rules": [
+            {
+              "type": "field",
+              "outboundTag": "direct",
+              "ip": [
+                "geoip:private"
+              ]
+            }
+          ]
+        }
+      }
+    },
+    {
+      "name": "🇺🇸 -> 🇪🇸 66.163.118.166 Madrid TR",
+      "config": {
+        "log": {
+          "loglevel": "warning"
+        },
+        "inbounds": [
+          {
+            "tag": "socks-in",
+            "listen": "127.0.0.1",
+            "port": 10808,
+            "protocol": "socks",
+            "settings": {
+              "auth": "noauth",
+              "udp": true
+            }
+          }
+        ],
+        "outbounds": [
+          {
+            "protocol": "trojan",
+            "settings": {
+              "servers": [
+                {
+                  "address": "66.163.118.166",
+                  "port": 443,
+                  "password": "0ab6c98dae3b48e8b9c4a776b6c9c19a"
+                }
+              ]
+            },
+            "streamSettings": {
+              "network": "tcp",
+              "security": "tls",
+              "tlsSettings": {
+                "serverName": "learn.discovergreatjobsandadvanceyourcareer.com",
+                "fingerprint": "chrome"
+              },
+              "sockopt": {
+                "dialerProxy": "entry-hop"
+              }
+            },
+            "tag": "exit-hop"
+          },
+          {
+            "protocol": "trojan",
+            "settings": {
+              "servers": [
+                {
+                  "address": "170.101.101.112",
+                  "port": 443,
+                  "password": "0ab6c98dae3b48e8b9c4a776b6c9c19a"
+                }
+              ]
+            },
+            "streamSettings": {
+              "network": "tcp",
+              "security": "tls",
+              "tlsSettings": {
+                "serverName": "resources.explorecreativejobsandenhanceyourcareerportfolio.com",
+                "fingerprint": "chrome"
+              }
+            },
+            "tag": "entry-hop"
+          },
+          {
+            "protocol": "freedom",
+            "tag": "direct"
+          }
+        ],
+        "routing": {
+          "rules": [
+            {
+              "type": "field",
+              "outboundTag": "direct",
+              "ip": [
+                "geoip:private"
+              ]
+            }
+          ]
+        }
+      }
+    },
+    {
+      "name": "🇺🇸 -> 🇨🇿 195.123.245.241 Prague VL",
+      "config": {
+        "log": {
+          "loglevel": "warning"
+        },
+        "inbounds": [
+          {
+            "tag": "socks-in",
+            "listen": "127.0.0.1",
+            "port": 10808,
+            "protocol": "socks",
+            "settings": {
+              "auth": "noauth",
+              "udp": true
+            }
+          }
+        ],
+        "outbounds": [
+          {
+            "protocol": "vless",
+            "settings": {
+              "vnext": [
+                {
+                  "address": "195.123.245.241",
+                  "port": 443,
+                  "users": [
+                    {
+                      "id": "7c053ca8-38cc-45e2-930c-eda1fd66f903",
+                      "flow": "xtls-rprx-vision"
+                    }
+                  ]
+                }
+              ]
+            },
+            "streamSettings": {
+              "network": "tcp",
+              "security": "reality",
+              "realitySettings": {
+                "serverName": "gateway.icloud.com",
+                "fingerprint": "chrome",
+                "publicKey": "hlY5ce1UsVIgE46y5PlEZhUsSaXUnCtoDLLaGrhInjw"
+              },
+              "sockopt": {
+                "dialerProxy": "entry-hop"
+              }
+            },
+            "tag": "exit-hop"
+          },
+          {
+            "protocol": "trojan",
+            "settings": {
+              "servers": [
+                {
+                  "address": "170.101.101.112",
+                  "port": 443,
+                  "password": "0ab6c98dae3b48e8b9c4a776b6c9c19a"
+                }
+              ]
+            },
+            "streamSettings": {
+              "network": "tcp",
+              "security": "tls",
+              "tlsSettings": {
+                "serverName": "resources.explorecreativejobsandenhanceyourcareerportfolio.com",
+                "fingerprint": "chrome"
+              }
+            },
+            "tag": "entry-hop"
+          },
+          {
+            "protocol": "freedom",
+            "tag": "direct"
+          }
+        ],
+        "routing": {
+          "rules": [
+            {
+              "type": "field",
+              "outboundTag": "direct",
+              "ip": [
+                "geoip:private"
+              ]
+            }
+          ]
+        }
+      }
+    },
+    {
+      "name": "🇺🇸 -> 🇯🇵 103.75.118.228 Tokyo VL",
+      "config": {
+        "log": {
+          "loglevel": "warning"
+        },
+        "inbounds": [
+          {
+            "tag": "socks-in",
+            "listen": "127.0.0.1",
+            "port": 10808,
+            "protocol": "socks",
+            "settings": {
+              "auth": "noauth",
+              "udp": true
+            }
+          }
+        ],
+        "outbounds": [
+          {
+            "protocol": "vless",
+            "settings": {
+              "vnext": [
+                {
+                  "address": "103.75.118.228",
+                  "port": 11452,
+                  "users": [
+                    {
+                      "id": "814bd064-544d-4255-a070-5705c03f6da9",
+                      "flow": "xtls-rprx-vision"
+                    }
+                  ]
+                }
+              ]
+            },
+            "streamSettings": {
+              "network": "tcp",
+              "security": "reality",
+              "realitySettings": {
+                "serverName": "www.apple.com",
+                "fingerprint": "chrome",
+                "publicKey": "k2hPp0tTW0Da-HK94wYpSCLbuK44LfGqC2MSJIM1Ti0"
+              },
+              "sockopt": {
+                "dialerProxy": "entry-hop"
+              }
+            },
+            "tag": "exit-hop"
+          },
+          {
+            "protocol": "trojan",
+            "settings": {
+              "servers": [
+                {
+                  "address": "170.101.101.112",
+                  "port": 443,
+                  "password": "0ab6c98dae3b48e8b9c4a776b6c9c19a"
+                }
+              ]
+            },
+            "streamSettings": {
+              "network": "tcp",
+              "security": "tls",
+              "tlsSettings": {
+                "serverName": "resources.explorecreativejobsandenhanceyourcareerportfolio.com",
+                "fingerprint": "chrome"
+              }
+            },
+            "tag": "entry-hop"
+          },
+          {
+            "protocol": "freedom",
+            "tag": "direct"
+          }
+        ],
+        "routing": {
+          "rules": [
+            {
+              "type": "field",
+              "outboundTag": "direct",
+              "ip": [
+                "geoip:private"
+              ]
+            }
+          ]
+        }
+      }
+    },
+    {
+      "name": "🇺🇸 -> 🇫🇮 95.216.27.15 Helsinki VL",
+      "config": {
+        "log": {
+          "loglevel": "warning"
+        },
+        "inbounds": [
+          {
+            "tag": "socks-in",
+            "listen": "127.0.0.1",
+            "port": 10808,
+            "protocol": "socks",
+            "settings": {
+              "auth": "noauth",
+              "udp": true
+            }
+          }
+        ],
+        "outbounds": [
+          {
+            "protocol": "vless",
+            "settings": {
+              "vnext": [
+                {
+                  "address": "95.216.27.15",
+                  "port": 2053,
+                  "users": [
+                    {
+                      "id": "b79d736d-0f10-4169-b626-362059d18204",
+                      "flow": ""
+                    }
+                  ]
+                }
+              ]
+            },
+            "streamSettings": {
+              "network": "tcp",
+              "security": "reality",
+              "realitySettings": {
+                "serverName": "www.cloudflare.com",
+                "fingerprint": "chrome",
+                "publicKey": "aiHdxKOzcFZDILKj3MIPrMsyT0XxMy_O6xoxnz6MIWs"
+              },
+              "sockopt": {
+                "dialerProxy": "entry-hop"
+              }
+            },
+            "tag": "exit-hop"
+          },
+          {
+            "protocol": "trojan",
+            "settings": {
+              "servers": [
+                {
+                  "address": "170.101.101.112",
+                  "port": 443,
+                  "password": "0ab6c98dae3b48e8b9c4a776b6c9c19a"
+                }
+              ]
+            },
+            "streamSettings": {
+              "network": "tcp",
+              "security": "tls",
+              "tlsSettings": {
+                "serverName": "resources.explorecreativejobsandenhanceyourcareerportfolio.com",
+                "fingerprint": "chrome"
+              }
+            },
+            "tag": "entry-hop"
+          },
+          {
+            "protocol": "freedom",
+            "tag": "direct"
+          }
+        ],
+        "routing": {
+          "rules": [
+            {
+              "type": "field",
+              "outboundTag": "direct",
+              "ip": [
+                "geoip:private"
+              ]
+            }
+          ]
+        }
+      }
+    },
+    {
+      "name": "🇺🇸 -> 🇨🇭 107.189.7.176 Roost VL",
+      "config": {
+        "log": {
+          "loglevel": "warning"
+        },
+        "inbounds": [
+          {
+            "tag": "socks-in",
+            "listen": "127.0.0.1",
+            "port": 10808,
+            "protocol": "socks",
+            "settings": {
+              "auth": "noauth",
+              "udp": true
+            }
+          }
+        ],
+        "outbounds": [
+          {
+            "protocol": "vless",
+            "settings": {
+              "vnext": [
+                {
+                  "address": "107.189.7.176",
+                  "port": 32752,
+                  "users": [
+                    {
+                      "id": "4970c1cd-13e1-498a-920a-61d07be2fa65",
+                      "flow": ""
+                    }
+                  ]
+                }
+              ]
+            },
+            "streamSettings": {
+              "network": "tcp",
+              "security": "reality",
+              "realitySettings": {
+                "serverName": "www.apple.com",
+                "fingerprint": "chrome",
+                "publicKey": "pfFcQxKv4EPhCDUoZMCmTjj4FK7HHQg_me-In3bOejA"
+              },
+              "sockopt": {
+                "dialerProxy": "entry-hop"
+              }
+            },
+            "tag": "exit-hop"
+          },
+          {
+            "protocol": "trojan",
+            "settings": {
+              "servers": [
+                {
+                  "address": "170.101.101.112",
+                  "port": 443,
+                  "password": "0ab6c98dae3b48e8b9c4a776b6c9c19a"
+                }
+              ]
+            },
+            "streamSettings": {
+              "network": "tcp",
+              "security": "tls",
+              "tlsSettings": {
+                "serverName": "resources.explorecreativejobsandenhanceyourcareerportfolio.com",
+                "fingerprint": "chrome"
+              }
+            },
+            "tag": "entry-hop"
+          },
+          {
+            "protocol": "freedom",
+            "tag": "direct"
+          }
+        ],
+        "routing": {
+          "rules": [
+            {
+              "type": "field",
+              "outboundTag": "direct",
+              "ip": [
+                "geoip:private"
+              ]
+            }
+          ]
+        }
+      }
+    },
+    {
+      "name": "🇺🇸 -> 🇮🇪 54.229.151.97 Dublin VM",
+      "config": {
+        "log": {
+          "loglevel": "warning"
+        },
+        "inbounds": [
+          {
+            "tag": "socks-in",
+            "listen": "127.0.0.1",
+            "port": 10808,
+            "protocol": "socks",
+            "settings": {
+              "auth": "noauth",
+              "udp": true
+            }
+          }
+        ],
+        "outbounds": [
+          {
+            "protocol": "vmess",
+            "settings": {
+              "vnext": [
+                {
+                  "address": "54.229.151.97",
+                  "port": 59236,
+                  "users": [
+                    {
+                      "id": "2387bfbc-10a6-4bd7-dc55-7cba954ce6e8",
+                      "alterId": 0,
+                      "security": "auto"
+                    }
+                  ]
+                }
+              ]
+            },
+            "streamSettings": {
+              "network": "tcp",
+              "sockopt": {
+                "dialerProxy": "entry-hop"
+              }
+            },
+            "tag": "exit-hop"
+          },
+          {
+            "protocol": "trojan",
+            "settings": {
+              "servers": [
+                {
+                  "address": "170.101.101.112",
+                  "port": 443,
+                  "password": "0ab6c98dae3b48e8b9c4a776b6c9c19a"
+                }
+              ]
+            },
+            "streamSettings": {
+              "network": "tcp",
+              "security": "tls",
+              "tlsSettings": {
+                "serverName": "resources.explorecreativejobsandenhanceyourcareerportfolio.com",
+                "fingerprint": "chrome"
+              }
+            },
+            "tag": "entry-hop"
+          },
+          {
+            "protocol": "freedom",
+            "tag": "direct"
+          }
+        ],
+        "routing": {
+          "rules": [
+            {
+              "type": "field",
+              "outboundTag": "direct",
+              "ip": [
+                "geoip:private"
+              ]
+            }
+          ]
+        }
+      }
+    },
+    {
+      "name": "🇺🇸 -> 🇫🇷 51.77.217.70 Roubaix VL",
+      "config": {
+        "log": {
+          "loglevel": "warning"
+        },
+        "inbounds": [
+          {
+            "tag": "socks-in",
+            "listen": "127.0.0.1",
+            "port": 10808,
+            "protocol": "socks",
+            "settings": {
+              "auth": "noauth",
+              "udp": true
+            }
+          }
+        ],
+        "outbounds": [
+          {
+            "protocol": "vless",
+            "settings": {
+              "vnext": [
+                {
+                  "address": "51.77.217.70",
+                  "port": 2053,
+                  "users": [
+                    {
+                      "id": "bf16ee0c-8b3c-41e4-ab3a-8b48033c404e",
+                      "flow": ""
+                    }
+                  ]
+                }
+              ]
+            },
+            "streamSettings": {
+              "network": "tcp",
+              "security": "reality",
+              "realitySettings": {
+                "serverName": "www.apple.com",
+                "fingerprint": "random",
+                "publicKey": "g63cT3uI0Y5iUtj3m__RYz7nmR1eIK4AYikdnZCl63w"
+              },
+              "sockopt": {
+                "dialerProxy": "entry-hop"
+              }
+            },
+            "tag": "exit-hop"
+          },
+          {
+            "protocol": "trojan",
+            "settings": {
+              "servers": [
+                {
+                  "address": "170.101.101.112",
+                  "port": 443,
+                  "password": "0ab6c98dae3b48e8b9c4a776b6c9c19a"
+                }
+              ]
+            },
+            "streamSettings": {
+              "network": "tcp",
+              "security": "tls",
+              "tlsSettings": {
+                "serverName": "resources.explorecreativejobsandenhanceyourcareerportfolio.com",
+                "fingerprint": "chrome"
+              }
+            },
+            "tag": "entry-hop"
+          },
+          {
+            "protocol": "freedom",
+            "tag": "direct"
+          }
+        ],
+        "routing": {
+          "rules": [
+            {
+              "type": "field",
+              "outboundTag": "direct",
+              "ip": [
+                "geoip:private"
+              ]
+            }
+          ]
+        }
+      }
+    },
+    {
+      "name": "🇺🇸 -> 🇸🇪 46.29.255.123 Washington VL",
+      "config": {
+        "log": {
+          "loglevel": "warning"
+        },
+        "inbounds": [
+          {
+            "tag": "socks-in",
+            "listen": "127.0.0.1",
+            "port": 10808,
+            "protocol": "socks",
+            "settings": {
+              "auth": "noauth",
+              "udp": true
+            }
+          }
+        ],
+        "outbounds": [
+          {
+            "protocol": "vless",
+            "settings": {
+              "vnext": [
+                {
+                  "address": "46.29.255.123",
+                  "port": 59539,
+                  "users": [
+                    {
+                      "id": "30572b57-f5ab-4eb8-82d4-a24d399b99f6",
+                      "flow": "xtls-rprx-vision"
+                    }
+                  ]
+                }
+              ]
+            },
+            "streamSettings": {
+              "network": "tcp",
+              "security": "reality",
+              "realitySettings": {
+                "serverName": "cloudflare-dns.com",
+                "fingerprint": "firefox",
+                "publicKey": "R6mPqCsjZMWauci4LHw7Qp1LGKmBd-sxMXplyOn9bSQ"
+              },
+              "sockopt": {
+                "dialerProxy": "entry-hop"
+              }
+            },
+            "tag": "exit-hop"
+          },
+          {
+            "protocol": "trojan",
+            "settings": {
+              "servers": [
+                {
+                  "address": "170.101.101.112",
+                  "port": 443,
+                  "password": "0ab6c98dae3b48e8b9c4a776b6c9c19a"
+                }
+              ]
+            },
+            "streamSettings": {
+              "network": "tcp",
+              "security": "tls",
+              "tlsSettings": {
+                "serverName": "resources.explorecreativejobsandenhanceyourcareerportfolio.com",
+                "fingerprint": "chrome"
+              }
+            },
+            "tag": "entry-hop"
+          },
+          {
+            "protocol": "freedom",
+            "tag": "direct"
+          }
+        ],
+        "routing": {
+          "rules": [
+            {
+              "type": "field",
+              "outboundTag": "direct",
+              "ip": [
+                "geoip:private"
+              ]
+            }
+          ]
+        }
+      }
+    },
+    {
+      "name": "🇺🇸 -> 🇨🇴 149.104.107.41 Bogotá SS",
+      "config": {
+        "log": {
+          "loglevel": "warning"
+        },
+        "inbounds": [
+          {
+            "tag": "socks-in",
+            "listen": "127.0.0.1",
+            "port": 10808,
+            "protocol": "socks",
+            "settings": {
+              "auth": "noauth",
+              "udp": true
+            }
+          }
+        ],
+        "outbounds": [
+          {
+            "protocol": "shadowsocks",
+            "settings": {
+              "servers": [
+                {
+                  "address": "149.104.107.41",
+                  "port": 8090,
+                  "method": "aes-256-gcm",
+                  "password": "PCnnH6SQSnfoS27"
+                }
+              ]
+            },
+            "tag": "exit-hop",
+            "streamSettings": {
+              "sockopt": {
+                "dialerProxy": "entry-hop"
+              }
+            }
+          },
+          {
+            "protocol": "trojan",
+            "settings": {
+              "servers": [
+                {
+                  "address": "170.101.101.112",
+                  "port": 443,
+                  "password": "0ab6c98dae3b48e8b9c4a776b6c9c19a"
+                }
+              ]
+            },
+            "streamSettings": {
+              "network": "tcp",
+              "security": "tls",
+              "tlsSettings": {
+                "serverName": "resources.explorecreativejobsandenhanceyourcareerportfolio.com",
+                "fingerprint": "chrome"
+              }
+            },
+            "tag": "entry-hop"
+          },
+          {
+            "protocol": "freedom",
+            "tag": "direct"
+          }
+        ],
+        "routing": {
+          "rules": [
+            {
+              "type": "field",
+              "outboundTag": "direct",
+              "ip": [
+                "geoip:private"
+              ]
+            }
+          ]
+        }
+      }
+    },
+    {
+      "name": "🇳🇱 -> 🇺🇸 185.215.132.9 Atlanta SS",
+      "config": {
+        "log": {
+          "loglevel": "warning"
+        },
+        "inbounds": [
+          {
+            "tag": "socks-in",
+            "listen": "127.0.0.1",
+            "port": 10808,
+            "protocol": "socks",
+            "settings": {
+              "auth": "noauth",
+              "udp": true
+            }
+          }
+        ],
+        "outbounds": [
+          {
+            "protocol": "shadowsocks",
+            "settings": {
+              "servers": [
+                {
+                  "address": "185.215.132.9",
+                  "port": 19999,
+                  "method": "aes-256-gcm",
+                  "password": "ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4="
+                }
+              ]
+            },
+            "tag": "exit-hop",
+            "streamSettings": {
+              "sockopt": {
+                "dialerProxy": "entry-hop"
+              }
+            }
+          },
+          {
+            "protocol": "shadowsocks",
+            "settings": {
+              "servers": [
+                {
+                  "address": "82.38.31.186",
+                  "port": 8080,
+                  "method": "chacha20-ietf-poly1305",
+                  "password": "k1dBOmOB4oqi7Ump37a1bQ"
+                }
+              ]
+            },
+            "tag": "entry-hop"
+          },
+          {
+            "protocol": "freedom",
+            "tag": "direct"
+          }
+        ],
+        "routing": {
+          "rules": [
+            {
+              "type": "field",
+              "outboundTag": "direct",
+              "ip": [
+                "geoip:private"
+              ]
+            }
+          ]
+        }
+      }
+    },
+    {
+      "name": "🇳🇱 -> 🇲🇽 216.238.80.100 Querétaro City TR",
+      "config": {
+        "log": {
+          "loglevel": "warning"
+        },
+        "inbounds": [
+          {
+            "tag": "socks-in",
+            "listen": "127.0.0.1",
+            "port": 10808,
+            "protocol": "socks",
+            "settings": {
+              "auth": "noauth",
+              "udp": true
+            }
+          }
+        ],
+        "outbounds": [
+          {
+            "protocol": "trojan",
+            "settings": {
+              "servers": [
+                {
+                  "address": "216.238.80.100",
+                  "port": 443,
+                  "password": "0ab6c98dae3b48e8b9c4a776b6c9c19a"
+                }
+              ]
+            },
+            "streamSettings": {
+              "network": "tcp",
+              "security": "tls",
+              "tlsSettings": {
+                "serverName": "connectwithtopemployersandfindidealjobs.com",
+                "fingerprint": "chrome"
+              },
+              "sockopt": {
+                "dialerProxy": "entry-hop"
+              }
+            },
+            "tag": "exit-hop"
+          },
+          {
+            "protocol": "shadowsocks",
+            "settings": {
+              "servers": [
+                {
+                  "address": "82.38.31.186",
+                  "port": 8080,
+                  "method": "chacha20-ietf-poly1305",
+                  "password": "k1dBOmOB4oqi7Ump37a1bQ"
+                }
+              ]
+            },
+            "tag": "entry-hop"
+          },
+          {
+            "protocol": "freedom",
+            "tag": "direct"
+          }
+        ],
+        "routing": {
+          "rules": [
+            {
+              "type": "field",
+              "outboundTag": "direct",
+              "ip": [
+                "geoip:private"
+              ]
+            }
+          ]
+        }
+      }
+    },
+    {
+      "name": "🇳🇱 -> 🇬🇧 185.176.206.9 City of London SS",
+      "config": {
+        "log": {
+          "loglevel": "warning"
+        },
+        "inbounds": [
+          {
+            "tag": "socks-in",
+            "listen": "127.0.0.1",
+            "port": 10808,
+            "protocol": "socks",
+            "settings": {
+              "auth": "noauth",
+              "udp": true
+            }
+          }
+        ],
+        "outbounds": [
+          {
+            "protocol": "shadowsocks",
+            "settings": {
+              "servers": [
+                {
+                  "address": "185.176.206.9",
+                  "port": 19999,
+                  "method": "aes-256-gcm",
+                  "password": "ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4="
+                }
+              ]
+            },
+            "tag": "exit-hop",
+            "streamSettings": {
+              "sockopt": {
+                "dialerProxy": "entry-hop"
+              }
+            }
+          },
+          {
+            "protocol": "shadowsocks",
+            "settings": {
+              "servers": [
+                {
+                  "address": "82.38.31.186",
+                  "port": 8080,
+                  "method": "chacha20-ietf-poly1305",
+                  "password": "k1dBOmOB4oqi7Ump37a1bQ"
+                }
+              ]
+            },
+            "tag": "entry-hop"
+          },
+          {
+            "protocol": "freedom",
+            "tag": "direct"
+          }
+        ],
+        "routing": {
+          "rules": [
+            {
+              "type": "field",
+              "outboundTag": "direct",
+              "ip": [
+                "geoip:private"
+              ]
+            }
+          ]
+        }
+      }
+    },
+    {
+      "name": "🇳🇱 -> 🇩🇪 jdwabxe.cvewfjg.shop Unknown VL",
+      "config": {
+        "log": {
+          "loglevel": "warning"
+        },
+        "inbounds": [
+          {
+            "tag": "socks-in",
+            "listen": "127.0.0.1",
+            "port": 10808,
+            "protocol": "socks",
+            "settings": {
+              "auth": "noauth",
+              "udp": true
+            }
+          }
+        ],
+        "outbounds": [
+          {
+            "protocol": "vless",
+            "settings": {
+              "vnext": [
+                {
+                  "address": "jdwabxe.cvewfjg.shop",
+                  "port": 443,
+                  "users": [
+                    {
+                      "id": "711c018e-2692-4aa8-93f3-544d83fcd16c",
+                      "flow": "xtls-rprx-vision"
+                    }
+                  ]
+                }
+              ]
+            },
+            "streamSettings": {
+              "network": "raw",
+              "security": "reality",
+              "realitySettings": {
+                "serverName": "www.cloudflare.com",
+                "fingerprint": "chrome",
+                "publicKey": "HyVSZ2OyySwXT-xRhTAqoiuYflIaj_b0Jxm7S1Iq9hs"
+              },
+              "sockopt": {
+                "dialerProxy": "entry-hop"
+              }
+            },
+            "tag": "exit-hop"
+          },
+          {
+            "protocol": "shadowsocks",
+            "settings": {
+              "servers": [
+                {
+                  "address": "82.38.31.186",
+                  "port": 8080,
+                  "method": "chacha20-ietf-poly1305",
+                  "password": "k1dBOmOB4oqi7Ump37a1bQ"
+                }
+              ]
+            },
+            "tag": "entry-hop"
+          },
+          {
+            "protocol": "freedom",
+            "tag": "direct"
+          }
+        ],
+        "routing": {
+          "rules": [
+            {
+              "type": "field",
+              "outboundTag": "direct",
+              "ip": [
+                "geoip:private"
+              ]
+            }
+          ]
+        }
+      }
+    },
+    {
+      "name": "🇳🇱 -> 🇵🇱 70.34.252.255 Warsaw TR",
+      "config": {
+        "log": {
+          "loglevel": "warning"
+        },
+        "inbounds": [
+          {
+            "tag": "socks-in",
+            "listen": "127.0.0.1",
+            "port": 10808,
+            "protocol": "socks",
+            "settings": {
+              "auth": "noauth",
+              "udp": true
+            }
+          }
+        ],
+        "outbounds": [
+          {
+            "protocol": "trojan",
+            "settings": {
+              "servers": [
+                {
+                  "address": "70.34.252.255",
+                  "port": 443,
+                  "password": "0ab6c98dae3b48e8b9c4a776b6c9c19a"
+                }
+              ]
+            },
+            "streamSettings": {
+              "network": "tcp",
+              "security": "tls",
+              "tlsSettings": {
+                "serverName": "browseexecutivejobopeningsandenhanceleadershipcareer.com",
+                "fingerprint": "chrome"
+              },
+              "sockopt": {
+                "dialerProxy": "entry-hop"
+              }
+            },
+            "tag": "exit-hop"
+          },
+          {
+            "protocol": "shadowsocks",
+            "settings": {
+              "servers": [
+                {
+                  "address": "82.38.31.186",
+                  "port": 8080,
+                  "method": "chacha20-ietf-poly1305",
+                  "password": "k1dBOmOB4oqi7Ump37a1bQ"
+                }
+              ]
+            },
+            "tag": "entry-hop"
+          },
+          {
+            "protocol": "freedom",
+            "tag": "direct"
+          }
+        ],
+        "routing": {
+          "rules": [
+            {
+              "type": "field",
+              "outboundTag": "direct",
+              "ip": [
+                "geoip:private"
+              ]
+            }
+          ]
+        }
+      }
+    },
+    {
+      "name": "🇳🇱 -> 🇨🇱 64.176.7.205 Santiago TR",
+      "config": {
+        "log": {
+          "loglevel": "warning"
+        },
+        "inbounds": [
+          {
+            "tag": "socks-in",
+            "listen": "127.0.0.1",
+            "port": 10808,
+            "protocol": "socks",
+            "settings": {
+              "auth": "noauth",
+              "udp": true
+            }
+          }
+        ],
+        "outbounds": [
+          {
+            "protocol": "trojan",
+            "settings": {
+              "servers": [
+                {
+                  "address": "64.176.7.205",
+                  "port": 443,
+                  "password": "0ab6c98dae3b48e8b9c4a776b6c9c19a"
+                }
+              ]
+            },
+            "streamSettings": {
+              "network": "tcp",
+              "security": "tls",
+              "tlsSettings": {
+                "serverName": "advanceyouremploymentskillsandcareerdevelopmenthub.com",
+                "fingerprint": "chrome"
+              },
+              "sockopt": {
+                "dialerProxy": "entry-hop"
+              }
+            },
+            "tag": "exit-hop"
+          },
+          {
+            "protocol": "shadowsocks",
+            "settings": {
+              "servers": [
+                {
+                  "address": "82.38.31.186",
+                  "port": 8080,
+                  "method": "chacha20-ietf-poly1305",
+                  "password": "k1dBOmOB4oqi7Ump37a1bQ"
+                }
+              ]
+            },
+            "tag": "entry-hop"
+          },
+          {
+            "protocol": "freedom",
+            "tag": "direct"
+          }
+        ],
+        "routing": {
+          "rules": [
+            {
+              "type": "field",
+              "outboundTag": "direct",
+              "ip": [
+                "geoip:private"
+              ]
+            }
+          ]
+        }
+      }
+    },
+    {
+      "name": "🇳🇱 -> 🇳🇱 193.29.139.223 Amsterdam SS",
+      "config": {
+        "log": {
+          "loglevel": "warning"
+        },
+        "inbounds": [
+          {
+            "tag": "socks-in",
+            "listen": "127.0.0.1",
+            "port": 10808,
+            "protocol": "socks",
+            "settings": {
+              "auth": "noauth",
+              "udp": true
+            }
+          }
+        ],
+        "outbounds": [
+          {
+            "protocol": "shadowsocks",
+            "settings": {
+              "servers": [
+                {
+                  "address": "193.29.139.223",
+                  "port": 8080,
+                  "method": "chacha20-ietf-poly1305",
+                  "password": "k1dBOmOB4oqi7Ump37a1bQ"
+                }
+              ]
+            },
+            "tag": "exit-hop",
+            "streamSettings": {
+              "sockopt": {
+                "dialerProxy": "entry-hop"
+              }
+            }
+          },
+          {
+            "protocol": "shadowsocks",
+            "settings": {
+              "servers": [
+                {
+                  "address": "82.38.31.186",
+                  "port": 8080,
+                  "method": "chacha20-ietf-poly1305",
+                  "password": "k1dBOmOB4oqi7Ump37a1bQ"
+                }
+              ]
+            },
+            "tag": "entry-hop"
+          },
+          {
+            "protocol": "freedom",
+            "tag": "direct"
+          }
+        ],
+        "routing": {
+          "rules": [
+            {
+              "type": "field",
+              "outboundTag": "direct",
+              "ip": [
+                "geoip:private"
+              ]
+            }
+          ]
+        }
+      }
+    },
+    {
+      "name": "🇳🇱 -> 🇦🇹 82.110.60.9 London SS",
+      "config": {
+        "log": {
+          "loglevel": "warning"
+        },
+        "inbounds": [
+          {
+            "tag": "socks-in",
+            "listen": "127.0.0.1",
+            "port": 10808,
+            "protocol": "socks",
+            "settings": {
+              "auth": "noauth",
+              "udp": true
+            }
+          }
+        ],
+        "outbounds": [
+          {
+            "protocol": "shadowsocks",
+            "settings": {
+              "servers": [
+                {
+                  "address": "82.110.60.9",
+                  "port": 19999,
+                  "method": "aes-256-gcm",
+                  "password": "ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4="
+                }
+              ]
+            },
+            "tag": "exit-hop",
+            "streamSettings": {
+              "sockopt": {
+                "dialerProxy": "entry-hop"
+              }
+            }
+          },
+          {
+            "protocol": "shadowsocks",
+            "settings": {
+              "servers": [
+                {
+                  "address": "82.38.31.186",
+                  "port": 8080,
+                  "method": "chacha20-ietf-poly1305",
+                  "password": "k1dBOmOB4oqi7Ump37a1bQ"
+                }
+              ]
+            },
+            "tag": "entry-hop"
+          },
+          {
+            "protocol": "freedom",
+            "tag": "direct"
+          }
+        ],
+        "routing": {
+          "rules": [
+            {
+              "type": "field",
+              "outboundTag": "direct",
+              "ip": [
+                "geoip:private"
+              ]
+            }
+          ]
+        }
+      }
+    },
+    {
+      "name": "🇳🇱 -> 🇮🇹 185.164.175.81 Milan SS",
+      "config": {
+        "log": {
+          "loglevel": "warning"
+        },
+        "inbounds": [
+          {
+            "tag": "socks-in",
+            "listen": "127.0.0.1",
+            "port": 10808,
+            "protocol": "socks",
+            "settings": {
+              "auth": "noauth",
+              "udp": true
+            }
+          }
+        ],
+        "outbounds": [
+          {
+            "protocol": "shadowsocks",
+            "settings": {
+              "servers": [
+                {
+                  "address": "185.164.175.81",
+                  "port": 19999,
+                  "method": "aes-256-gcm",
+                  "password": "ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4="
+                }
+              ]
+            },
+            "tag": "exit-hop",
+            "streamSettings": {
+              "sockopt": {
+                "dialerProxy": "entry-hop"
+              }
+            }
+          },
+          {
+            "protocol": "shadowsocks",
+            "settings": {
+              "servers": [
+                {
+                  "address": "82.38.31.186",
+                  "port": 8080,
+                  "method": "chacha20-ietf-poly1305",
+                  "password": "k1dBOmOB4oqi7Ump37a1bQ"
+                }
+              ]
+            },
+            "tag": "entry-hop"
+          },
+          {
+            "protocol": "freedom",
+            "tag": "direct"
+          }
+        ],
+        "routing": {
+          "rules": [
+            {
+              "type": "field",
+              "outboundTag": "direct",
+              "ip": [
+                "geoip:private"
+              ]
+            }
+          ]
+        }
+      }
+    },
+    {
+      "name": "🇳🇱 -> 🇪🇸 66.163.118.166 Madrid TR",
+      "config": {
+        "log": {
+          "loglevel": "warning"
+        },
+        "inbounds": [
+          {
+            "tag": "socks-in",
+            "listen": "127.0.0.1",
+            "port": 10808,
+            "protocol": "socks",
+            "settings": {
+              "auth": "noauth",
+              "udp": true
+            }
+          }
+        ],
+        "outbounds": [
+          {
+            "protocol": "trojan",
+            "settings": {
+              "servers": [
+                {
+                  "address": "66.163.118.166",
+                  "port": 443,
+                  "password": "0ab6c98dae3b48e8b9c4a776b6c9c19a"
+                }
+              ]
+            },
+            "streamSettings": {
+              "network": "tcp",
+              "security": "tls",
+              "tlsSettings": {
+                "serverName": "learn.discovergreatjobsandadvanceyourcareer.com",
+                "fingerprint": "chrome"
+              },
+              "sockopt": {
+                "dialerProxy": "entry-hop"
+              }
+            },
+            "tag": "exit-hop"
+          },
+          {
+            "protocol": "shadowsocks",
+            "settings": {
+              "servers": [
+                {
+                  "address": "82.38.31.186",
+                  "port": 8080,
+                  "method": "chacha20-ietf-poly1305",
+                  "password": "k1dBOmOB4oqi7Ump37a1bQ"
+                }
+              ]
+            },
+            "tag": "entry-hop"
+          },
+          {
+            "protocol": "freedom",
+            "tag": "direct"
+          }
+        ],
+        "routing": {
+          "rules": [
+            {
+              "type": "field",
+              "outboundTag": "direct",
+              "ip": [
+                "geoip:private"
+              ]
+            }
+          ]
+        }
+      }
+    },
+    {
+      "name": "🇳🇱 -> 🇨🇿 195.123.245.241 Prague VL",
+      "config": {
+        "log": {
+          "loglevel": "warning"
+        },
+        "inbounds": [
+          {
+            "tag": "socks-in",
+            "listen": "127.0.0.1",
+            "port": 10808,
+            "protocol": "socks",
+            "settings": {
+              "auth": "noauth",
+              "udp": true
+            }
+          }
+        ],
+        "outbounds": [
+          {
+            "protocol": "vless",
+            "settings": {
+              "vnext": [
+                {
+                  "address": "195.123.245.241",
+                  "port": 443,
+                  "users": [
+                    {
+                      "id": "7c053ca8-38cc-45e2-930c-eda1fd66f903",
+                      "flow": "xtls-rprx-vision"
+                    }
+                  ]
+                }
+              ]
+            },
+            "streamSettings": {
+              "network": "tcp",
+              "security": "reality",
+              "realitySettings": {
+                "serverName": "gateway.icloud.com",
+                "fingerprint": "chrome",
+                "publicKey": "hlY5ce1UsVIgE46y5PlEZhUsSaXUnCtoDLLaGrhInjw"
+              },
+              "sockopt": {
+                "dialerProxy": "entry-hop"
+              }
+            },
+            "tag": "exit-hop"
+          },
+          {
+            "protocol": "shadowsocks",
+            "settings": {
+              "servers": [
+                {
+                  "address": "82.38.31.186",
+                  "port": 8080,
+                  "method": "chacha20-ietf-poly1305",
+                  "password": "k1dBOmOB4oqi7Ump37a1bQ"
+                }
+              ]
+            },
+            "tag": "entry-hop"
+          },
+          {
+            "protocol": "freedom",
+            "tag": "direct"
+          }
+        ],
+        "routing": {
+          "rules": [
+            {
+              "type": "field",
+              "outboundTag": "direct",
+              "ip": [
+                "geoip:private"
+              ]
+            }
+          ]
+        }
+      }
+    },
+    {
+      "name": "🇳🇱 -> 🇯🇵 103.75.118.228 Tokyo VL",
+      "config": {
+        "log": {
+          "loglevel": "warning"
+        },
+        "inbounds": [
+          {
+            "tag": "socks-in",
+            "listen": "127.0.0.1",
+            "port": 10808,
+            "protocol": "socks",
+            "settings": {
+              "auth": "noauth",
+              "udp": true
+            }
+          }
+        ],
+        "outbounds": [
+          {
+            "protocol": "vless",
+            "settings": {
+              "vnext": [
+                {
+                  "address": "103.75.118.228",
+                  "port": 11452,
+                  "users": [
+                    {
+                      "id": "814bd064-544d-4255-a070-5705c03f6da9",
+                      "flow": "xtls-rprx-vision"
+                    }
+                  ]
+                }
+              ]
+            },
+            "streamSettings": {
+              "network": "tcp",
+              "security": "reality",
+              "realitySettings": {
+                "serverName": "www.apple.com",
+                "fingerprint": "chrome",
+                "publicKey": "k2hPp0tTW0Da-HK94wYpSCLbuK44LfGqC2MSJIM1Ti0"
+              },
+              "sockopt": {
+                "dialerProxy": "entry-hop"
+              }
+            },
+            "tag": "exit-hop"
+          },
+          {
+            "protocol": "shadowsocks",
+            "settings": {
+              "servers": [
+                {
+                  "address": "82.38.31.186",
+                  "port": 8080,
+                  "method": "chacha20-ietf-poly1305",
+                  "password": "k1dBOmOB4oqi7Ump37a1bQ"
+                }
+              ]
+            },
+            "tag": "entry-hop"
+          },
+          {
+            "protocol": "freedom",
+            "tag": "direct"
+          }
+        ],
+        "routing": {
+          "rules": [
+            {
+              "type": "field",
+              "outboundTag": "direct",
+              "ip": [
+                "geoip:private"
+              ]
+            }
+          ]
+        }
+      }
+    },
+    {
+      "name": "🇳🇱 -> 🇫🇮 95.216.27.15 Helsinki VL",
+      "config": {
+        "log": {
+          "loglevel": "warning"
+        },
+        "inbounds": [
+          {
+            "tag": "socks-in",
+            "listen": "127.0.0.1",
+            "port": 10808,
+            "protocol": "socks",
+            "settings": {
+              "auth": "noauth",
+              "udp": true
+            }
+          }
+        ],
+        "outbounds": [
+          {
+            "protocol": "vless",
+            "settings": {
+              "vnext": [
+                {
+                  "address": "95.216.27.15",
+                  "port": 2053,
+                  "users": [
+                    {
+                      "id": "b79d736d-0f10-4169-b626-362059d18204",
+                      "flow": ""
+                    }
+                  ]
+                }
+              ]
+            },
+            "streamSettings": {
+              "network": "tcp",
+              "security": "reality",
+              "realitySettings": {
+                "serverName": "www.cloudflare.com",
+                "fingerprint": "chrome",
+                "publicKey": "aiHdxKOzcFZDILKj3MIPrMsyT0XxMy_O6xoxnz6MIWs"
+              },
+              "sockopt": {
+                "dialerProxy": "entry-hop"
+              }
+            },
+            "tag": "exit-hop"
+          },
+          {
+            "protocol": "shadowsocks",
+            "settings": {
+              "servers": [
+                {
+                  "address": "82.38.31.186",
+                  "port": 8080,
+                  "method": "chacha20-ietf-poly1305",
+                  "password": "k1dBOmOB4oqi7Ump37a1bQ"
+                }
+              ]
+            },
+            "tag": "entry-hop"
+          },
+          {
+            "protocol": "freedom",
+            "tag": "direct"
+          }
+        ],
+        "routing": {
+          "rules": [
+            {
+              "type": "field",
+              "outboundTag": "direct",
+              "ip": [
+                "geoip:private"
+              ]
+            }
+          ]
+        }
+      }
+    },
+    {
+      "name": "🇳🇱 -> 🇨🇭 107.189.7.176 Roost VL",
+      "config": {
+        "log": {
+          "loglevel": "warning"
+        },
+        "inbounds": [
+          {
+            "tag": "socks-in",
+            "listen": "127.0.0.1",
+            "port": 10808,
+            "protocol": "socks",
+            "settings": {
+              "auth": "noauth",
+              "udp": true
+            }
+          }
+        ],
+        "outbounds": [
+          {
+            "protocol": "vless",
+            "settings": {
+              "vnext": [
+                {
+                  "address": "107.189.7.176",
+                  "port": 32752,
+                  "users": [
+                    {
+                      "id": "4970c1cd-13e1-498a-920a-61d07be2fa65",
+                      "flow": ""
+                    }
+                  ]
+                }
+              ]
+            },
+            "streamSettings": {
+              "network": "tcp",
+              "security": "reality",
+              "realitySettings": {
+                "serverName": "www.apple.com",
+                "fingerprint": "chrome",
+                "publicKey": "pfFcQxKv4EPhCDUoZMCmTjj4FK7HHQg_me-In3bOejA"
+              },
+              "sockopt": {
+                "dialerProxy": "entry-hop"
+              }
+            },
+            "tag": "exit-hop"
+          },
+          {
+            "protocol": "shadowsocks",
+            "settings": {
+              "servers": [
+                {
+                  "address": "82.38.31.186",
+                  "port": 8080,
+                  "method": "chacha20-ietf-poly1305",
+                  "password": "k1dBOmOB4oqi7Ump37a1bQ"
+                }
+              ]
+            },
+            "tag": "entry-hop"
+          },
+          {
+            "protocol": "freedom",
+            "tag": "direct"
+          }
+        ],
+        "routing": {
+          "rules": [
+            {
+              "type": "field",
+              "outboundTag": "direct",
+              "ip": [
+                "geoip:private"
+              ]
+            }
+          ]
+        }
+      }
+    },
+    {
+      "name": "🇳🇱 -> 🇮🇪 54.229.151.97 Dublin VM",
+      "config": {
+        "log": {
+          "loglevel": "warning"
+        },
+        "inbounds": [
+          {
+            "tag": "socks-in",
+            "listen": "127.0.0.1",
+            "port": 10808,
+            "protocol": "socks",
+            "settings": {
+              "auth": "noauth",
+              "udp": true
+            }
+          }
+        ],
+        "outbounds": [
+          {
+            "protocol": "vmess",
+            "settings": {
+              "vnext": [
+                {
+                  "address": "54.229.151.97",
+                  "port": 59236,
+                  "users": [
+                    {
+                      "id": "2387bfbc-10a6-4bd7-dc55-7cba954ce6e8",
+                      "alterId": 0,
+                      "security": "auto"
+                    }
+                  ]
+                }
+              ]
+            },
+            "streamSettings": {
+              "network": "tcp",
+              "sockopt": {
+                "dialerProxy": "entry-hop"
+              }
+            },
+            "tag": "exit-hop"
+          },
+          {
+            "protocol": "shadowsocks",
+            "settings": {
+              "servers": [
+                {
+                  "address": "82.38.31.186",
+                  "port": 8080,
+                  "method": "chacha20-ietf-poly1305",
+                  "password": "k1dBOmOB4oqi7Ump37a1bQ"
+                }
+              ]
+            },
+            "tag": "entry-hop"
+          },
+          {
+            "protocol": "freedom",
+            "tag": "direct"
+          }
+        ],
+        "routing": {
+          "rules": [
+            {
+              "type": "field",
+              "outboundTag": "direct",
+              "ip": [
+                "geoip:private"
+              ]
+            }
+          ]
+        }
+      }
+    },
+    {
+      "name": "🇳🇱 -> 🇫🇷 51.77.217.70 Roubaix VL",
+      "config": {
+        "log": {
+          "loglevel": "warning"
+        },
+        "inbounds": [
+          {
+            "tag": "socks-in",
+            "listen": "127.0.0.1",
+            "port": 10808,
+            "protocol": "socks",
+            "settings": {
+              "auth": "noauth",
+              "udp": true
+            }
+          }
+        ],
+        "outbounds": [
+          {
+            "protocol": "vless",
+            "settings": {
+              "vnext": [
+                {
+                  "address": "51.77.217.70",
+                  "port": 2053,
+                  "users": [
+                    {
+                      "id": "bf16ee0c-8b3c-41e4-ab3a-8b48033c404e",
+                      "flow": ""
+                    }
+                  ]
+                }
+              ]
+            },
+            "streamSettings": {
+              "network": "tcp",
+              "security": "reality",
+              "realitySettings": {
+                "serverName": "www.apple.com",
+                "fingerprint": "random",
+                "publicKey": "g63cT3uI0Y5iUtj3m__RYz7nmR1eIK4AYikdnZCl63w"
+              },
+              "sockopt": {
+                "dialerProxy": "entry-hop"
+              }
+            },
+            "tag": "exit-hop"
+          },
+          {
+            "protocol": "shadowsocks",
+            "settings": {
+              "servers": [
+                {
+                  "address": "82.38.31.186",
+                  "port": 8080,
+                  "method": "chacha20-ietf-poly1305",
+                  "password": "k1dBOmOB4oqi7Ump37a1bQ"
+                }
+              ]
+            },
+            "tag": "entry-hop"
+          },
+          {
+            "protocol": "freedom",
+            "tag": "direct"
+          }
+        ],
+        "routing": {
+          "rules": [
+            {
+              "type": "field",
+              "outboundTag": "direct",
+              "ip": [
+                "geoip:private"
+              ]
+            }
+          ]
+        }
+      }
+    },
+    {
+      "name": "🇳🇱 -> 🇸🇪 46.29.255.123 Washington VL",
+      "config": {
+        "log": {
+          "loglevel": "warning"
+        },
+        "inbounds": [
+          {
+            "tag": "socks-in",
+            "listen": "127.0.0.1",
+            "port": 10808,
+            "protocol": "socks",
+            "settings": {
+              "auth": "noauth",
+              "udp": true
+            }
+          }
+        ],
+        "outbounds": [
+          {
+            "protocol": "vless",
+            "settings": {
+              "vnext": [
+                {
+                  "address": "46.29.255.123",
+                  "port": 59539,
+                  "users": [
+                    {
+                      "id": "30572b57-f5ab-4eb8-82d4-a24d399b99f6",
+                      "flow": "xtls-rprx-vision"
+                    }
+                  ]
+                }
+              ]
+            },
+            "streamSettings": {
+              "network": "tcp",
+              "security": "reality",
+              "realitySettings": {
+                "serverName": "cloudflare-dns.com",
+                "fingerprint": "firefox",
+                "publicKey": "R6mPqCsjZMWauci4LHw7Qp1LGKmBd-sxMXplyOn9bSQ"
+              },
+              "sockopt": {
+                "dialerProxy": "entry-hop"
+              }
+            },
+            "tag": "exit-hop"
+          },
+          {
+            "protocol": "shadowsocks",
+            "settings": {
+              "servers": [
+                {
+                  "address": "82.38.31.186",
+                  "port": 8080,
+                  "method": "chacha20-ietf-poly1305",
+                  "password": "k1dBOmOB4oqi7Ump37a1bQ"
+                }
+              ]
+            },
+            "tag": "entry-hop"
+          },
+          {
+            "protocol": "freedom",
+            "tag": "direct"
+          }
+        ],
+        "routing": {
+          "rules": [
+            {
+              "type": "field",
+              "outboundTag": "direct",
+              "ip": [
+                "geoip:private"
+              ]
+            }
+          ]
+        }
+      }
+    },
+    {
+      "name": "🇳🇱 -> 🇨🇴 149.104.107.41 Bogotá SS",
+      "config": {
+        "log": {
+          "loglevel": "warning"
+        },
+        "inbounds": [
+          {
+            "tag": "socks-in",
+            "listen": "127.0.0.1",
+            "port": 10808,
+            "protocol": "socks",
+            "settings": {
+              "auth": "noauth",
+              "udp": true
+            }
+          }
+        ],
+        "outbounds": [
+          {
+            "protocol": "shadowsocks",
+            "settings": {
+              "servers": [
+                {
+                  "address": "149.104.107.41",
+                  "port": 8090,
+                  "method": "aes-256-gcm",
+                  "password": "PCnnH6SQSnfoS27"
+                }
+              ]
+            },
+            "tag": "exit-hop",
+            "streamSettings": {
+              "sockopt": {
+                "dialerProxy": "entry-hop"
+              }
+            }
+          },
+          {
+            "protocol": "shadowsocks",
+            "settings": {
+              "servers": [
+                {
+                  "address": "82.38.31.186",
+                  "port": 8080,
+                  "method": "chacha20-ietf-poly1305",
+                  "password": "k1dBOmOB4oqi7Ump37a1bQ"
+                }
+              ]
+            },
+            "tag": "entry-hop"
+          },
+          {
+            "protocol": "freedom",
+            "tag": "direct"
+          }
+        ],
+        "routing": {
+          "rules": [
+            {
+              "type": "field",
+              "outboundTag": "direct",
+              "ip": [
+                "geoip:private"
+              ]
+            }
+          ]
+        }
+      }
+    },
+    {
+      "name": "🇺🇸 -> 🇺🇸 185.215.132.9 Atlanta SS",
+      "config": {
+        "log": {
+          "loglevel": "warning"
+        },
+        "inbounds": [
+          {
+            "tag": "socks-in",
+            "listen": "127.0.0.1",
+            "port": 10808,
+            "protocol": "socks",
+            "settings": {
+              "auth": "noauth",
+              "udp": true
+            }
+          }
+        ],
+        "outbounds": [
+          {
+            "protocol": "shadowsocks",
+            "settings": {
+              "servers": [
+                {
+                  "address": "185.215.132.9",
+                  "port": 19999,
+                  "method": "aes-256-gcm",
+                  "password": "ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4="
+                }
+              ]
+            },
+            "tag": "exit-hop",
+            "streamSettings": {
+              "sockopt": {
+                "dialerProxy": "entry-hop"
+              }
+            }
+          },
+          {
+            "protocol": "vmess",
+            "settings": {
+              "vnext": [
+                {
+                  "address": "67.220.85.46",
+                  "port": 18000,
+                  "users": [
+                    {
+                      "id": "f8c8dc3d-0d37-46b0-8b34-a7232882fcfe",
+                      "alterId": 0,
+                      "security": "auto"
+                    }
+                  ]
+                }
+              ]
+            },
+            "streamSettings": {
+              "network": "tcp"
+            },
+            "tag": "entry-hop"
+          },
+          {
+            "protocol": "freedom",
+            "tag": "direct"
+          }
+        ],
+        "routing": {
+          "rules": [
+            {
+              "type": "field",
+              "outboundTag": "direct",
+              "ip": [
+                "geoip:private"
+              ]
+            }
+          ]
+        }
+      }
+    },
+    {
+      "name": "🇺🇸 -> 🇲🇽 216.238.80.100 Querétaro City TR",
+      "config": {
+        "log": {
+          "loglevel": "warning"
+        },
+        "inbounds": [
+          {
+            "tag": "socks-in",
+            "listen": "127.0.0.1",
+            "port": 10808,
+            "protocol": "socks",
+            "settings": {
+              "auth": "noauth",
+              "udp": true
+            }
+          }
+        ],
+        "outbounds": [
+          {
+            "protocol": "trojan",
+            "settings": {
+              "servers": [
+                {
+                  "address": "216.238.80.100",
+                  "port": 443,
+                  "password": "0ab6c98dae3b48e8b9c4a776b6c9c19a"
+                }
+              ]
+            },
+            "streamSettings": {
+              "network": "tcp",
+              "security": "tls",
+              "tlsSettings": {
+                "serverName": "connectwithtopemployersandfindidealjobs.com",
+                "fingerprint": "chrome"
+              },
+              "sockopt": {
+                "dialerProxy": "entry-hop"
+              }
+            },
+            "tag": "exit-hop"
+          },
+          {
+            "protocol": "vmess",
+            "settings": {
+              "vnext": [
+                {
+                  "address": "67.220.85.46",
+                  "port": 18000,
+                  "users": [
+                    {
+                      "id": "f8c8dc3d-0d37-46b0-8b34-a7232882fcfe",
+                      "alterId": 0,
+                      "security": "auto"
+                    }
+                  ]
+                }
+              ]
+            },
+            "streamSettings": {
+              "network": "tcp"
+            },
+            "tag": "entry-hop"
+          },
+          {
+            "protocol": "freedom",
+            "tag": "direct"
+          }
+        ],
+        "routing": {
+          "rules": [
+            {
+              "type": "field",
+              "outboundTag": "direct",
+              "ip": [
+                "geoip:private"
+              ]
+            }
+          ]
+        }
+      }
+    },
+    {
+      "name": "🇺🇸 -> 🇬🇧 185.176.206.9 City of London SS",
+      "config": {
+        "log": {
+          "loglevel": "warning"
+        },
+        "inbounds": [
+          {
+            "tag": "socks-in",
+            "listen": "127.0.0.1",
+            "port": 10808,
+            "protocol": "socks",
+            "settings": {
+              "auth": "noauth",
+              "udp": true
+            }
+          }
+        ],
+        "outbounds": [
+          {
+            "protocol": "shadowsocks",
+            "settings": {
+              "servers": [
+                {
+                  "address": "185.176.206.9",
+                  "port": 19999,
+                  "method": "aes-256-gcm",
+                  "password": "ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4="
+                }
+              ]
+            },
+            "tag": "exit-hop",
+            "streamSettings": {
+              "sockopt": {
+                "dialerProxy": "entry-hop"
+              }
+            }
+          },
+          {
+            "protocol": "vmess",
+            "settings": {
+              "vnext": [
+                {
+                  "address": "67.220.85.46",
+                  "port": 18000,
+                  "users": [
+                    {
+                      "id": "f8c8dc3d-0d37-46b0-8b34-a7232882fcfe",
+                      "alterId": 0,
+                      "security": "auto"
+                    }
+                  ]
+                }
+              ]
+            },
+            "streamSettings": {
+              "network": "tcp"
+            },
+            "tag": "entry-hop"
+          },
+          {
+            "protocol": "freedom",
+            "tag": "direct"
+          }
+        ],
+        "routing": {
+          "rules": [
+            {
+              "type": "field",
+              "outboundTag": "direct",
+              "ip": [
+                "geoip:private"
+              ]
+            }
+          ]
+        }
+      }
+    },
+    {
+      "name": "🇺🇸 -> 🇩🇪 jdwabxe.cvewfjg.shop Unknown VL",
+      "config": {
+        "log": {
+          "loglevel": "warning"
+        },
+        "inbounds": [
+          {
+            "tag": "socks-in",
+            "listen": "127.0.0.1",
+            "port": 10808,
+            "protocol": "socks",
+            "settings": {
+              "auth": "noauth",
+              "udp": true
+            }
+          }
+        ],
+        "outbounds": [
+          {
+            "protocol": "vless",
+            "settings": {
+              "vnext": [
+                {
+                  "address": "jdwabxe.cvewfjg.shop",
+                  "port": 443,
+                  "users": [
+                    {
+                      "id": "711c018e-2692-4aa8-93f3-544d83fcd16c",
+                      "flow": "xtls-rprx-vision"
+                    }
+                  ]
+                }
+              ]
+            },
+            "streamSettings": {
+              "network": "raw",
+              "security": "reality",
+              "realitySettings": {
+                "serverName": "www.cloudflare.com",
+                "fingerprint": "chrome",
+                "publicKey": "HyVSZ2OyySwXT-xRhTAqoiuYflIaj_b0Jxm7S1Iq9hs"
+              },
+              "sockopt": {
+                "dialerProxy": "entry-hop"
+              }
+            },
+            "tag": "exit-hop"
+          },
+          {
+            "protocol": "vmess",
+            "settings": {
+              "vnext": [
+                {
+                  "address": "67.220.85.46",
+                  "port": 18000,
+                  "users": [
+                    {
+                      "id": "f8c8dc3d-0d37-46b0-8b34-a7232882fcfe",
+                      "alterId": 0,
+                      "security": "auto"
+                    }
+                  ]
+                }
+              ]
+            },
+            "streamSettings": {
+              "network": "tcp"
+            },
+            "tag": "entry-hop"
+          },
+          {
+            "protocol": "freedom",
+            "tag": "direct"
+          }
+        ],
+        "routing": {
+          "rules": [
+            {
+              "type": "field",
+              "outboundTag": "direct",
+              "ip": [
+                "geoip:private"
+              ]
+            }
+          ]
+        }
+      }
+    },
+    {
+      "name": "🇺🇸 -> 🇵🇱 70.34.252.255 Warsaw TR",
+      "config": {
+        "log": {
+          "loglevel": "warning"
+        },
+        "inbounds": [
+          {
+            "tag": "socks-in",
+            "listen": "127.0.0.1",
+            "port": 10808,
+            "protocol": "socks",
+            "settings": {
+              "auth": "noauth",
+              "udp": true
+            }
+          }
+        ],
+        "outbounds": [
+          {
+            "protocol": "trojan",
+            "settings": {
+              "servers": [
+                {
+                  "address": "70.34.252.255",
+                  "port": 443,
+                  "password": "0ab6c98dae3b48e8b9c4a776b6c9c19a"
+                }
+              ]
+            },
+            "streamSettings": {
+              "network": "tcp",
+              "security": "tls",
+              "tlsSettings": {
+                "serverName": "browseexecutivejobopeningsandenhanceleadershipcareer.com",
+                "fingerprint": "chrome"
+              },
+              "sockopt": {
+                "dialerProxy": "entry-hop"
+              }
+            },
+            "tag": "exit-hop"
+          },
+          {
+            "protocol": "vmess",
+            "settings": {
+              "vnext": [
+                {
+                  "address": "67.220.85.46",
+                  "port": 18000,
+                  "users": [
+                    {
+                      "id": "f8c8dc3d-0d37-46b0-8b34-a7232882fcfe",
+                      "alterId": 0,
+                      "security": "auto"
+                    }
+                  ]
+                }
+              ]
+            },
+            "streamSettings": {
+              "network": "tcp"
+            },
+            "tag": "entry-hop"
+          },
+          {
+            "protocol": "freedom",
+            "tag": "direct"
+          }
+        ],
+        "routing": {
+          "rules": [
+            {
+              "type": "field",
+              "outboundTag": "direct",
+              "ip": [
+                "geoip:private"
+              ]
+            }
+          ]
+        }
+      }
+    },
+    {
+      "name": "🇺🇸 -> 🇨🇱 64.176.7.205 Santiago TR",
+      "config": {
+        "log": {
+          "loglevel": "warning"
+        },
+        "inbounds": [
+          {
+            "tag": "socks-in",
+            "listen": "127.0.0.1",
+            "port": 10808,
+            "protocol": "socks",
+            "settings": {
+              "auth": "noauth",
+              "udp": true
+            }
+          }
+        ],
+        "outbounds": [
+          {
+            "protocol": "trojan",
+            "settings": {
+              "servers": [
+                {
+                  "address": "64.176.7.205",
+                  "port": 443,
+                  "password": "0ab6c98dae3b48e8b9c4a776b6c9c19a"
+                }
+              ]
+            },
+            "streamSettings": {
+              "network": "tcp",
+              "security": "tls",
+              "tlsSettings": {
+                "serverName": "advanceyouremploymentskillsandcareerdevelopmenthub.com",
+                "fingerprint": "chrome"
+              },
+              "sockopt": {
+                "dialerProxy": "entry-hop"
+              }
+            },
+            "tag": "exit-hop"
+          },
+          {
+            "protocol": "vmess",
+            "settings": {
+              "vnext": [
+                {
+                  "address": "67.220.85.46",
+                  "port": 18000,
+                  "users": [
+                    {
+                      "id": "f8c8dc3d-0d37-46b0-8b34-a7232882fcfe",
+                      "alterId": 0,
+                      "security": "auto"
+                    }
+                  ]
+                }
+              ]
+            },
+            "streamSettings": {
+              "network": "tcp"
+            },
+            "tag": "entry-hop"
+          },
+          {
+            "protocol": "freedom",
+            "tag": "direct"
+          }
+        ],
+        "routing": {
+          "rules": [
+            {
+              "type": "field",
+              "outboundTag": "direct",
+              "ip": [
+                "geoip:private"
+              ]
+            }
+          ]
+        }
+      }
+    },
+    {
+      "name": "🇺🇸 -> 🇳🇱 193.29.139.223 Amsterdam SS",
+      "config": {
+        "log": {
+          "loglevel": "warning"
+        },
+        "inbounds": [
+          {
+            "tag": "socks-in",
+            "listen": "127.0.0.1",
+            "port": 10808,
+            "protocol": "socks",
+            "settings": {
+              "auth": "noauth",
+              "udp": true
+            }
+          }
+        ],
+        "outbounds": [
+          {
+            "protocol": "shadowsocks",
+            "settings": {
+              "servers": [
+                {
+                  "address": "193.29.139.223",
+                  "port": 8080,
+                  "method": "chacha20-ietf-poly1305",
+                  "password": "k1dBOmOB4oqi7Ump37a1bQ"
+                }
+              ]
+            },
+            "tag": "exit-hop",
+            "streamSettings": {
+              "sockopt": {
+                "dialerProxy": "entry-hop"
+              }
+            }
+          },
+          {
+            "protocol": "vmess",
+            "settings": {
+              "vnext": [
+                {
+                  "address": "67.220.85.46",
+                  "port": 18000,
+                  "users": [
+                    {
+                      "id": "f8c8dc3d-0d37-46b0-8b34-a7232882fcfe",
+                      "alterId": 0,
+                      "security": "auto"
+                    }
+                  ]
+                }
+              ]
+            },
+            "streamSettings": {
+              "network": "tcp"
+            },
+            "tag": "entry-hop"
+          },
+          {
+            "protocol": "freedom",
+            "tag": "direct"
+          }
+        ],
+        "routing": {
+          "rules": [
+            {
+              "type": "field",
+              "outboundTag": "direct",
+              "ip": [
+                "geoip:private"
+              ]
+            }
+          ]
+        }
+      }
+    },
+    {
+      "name": "🇺🇸 -> 🇦🇹 82.110.60.9 London SS",
+      "config": {
+        "log": {
+          "loglevel": "warning"
+        },
+        "inbounds": [
+          {
+            "tag": "socks-in",
+            "listen": "127.0.0.1",
+            "port": 10808,
+            "protocol": "socks",
+            "settings": {
+              "auth": "noauth",
+              "udp": true
+            }
+          }
+        ],
+        "outbounds": [
+          {
+            "protocol": "shadowsocks",
+            "settings": {
+              "servers": [
+                {
+                  "address": "82.110.60.9",
+                  "port": 19999,
+                  "method": "aes-256-gcm",
+                  "password": "ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4="
+                }
+              ]
+            },
+            "tag": "exit-hop",
+            "streamSettings": {
+              "sockopt": {
+                "dialerProxy": "entry-hop"
+              }
+            }
+          },
+          {
+            "protocol": "vmess",
+            "settings": {
+              "vnext": [
+                {
+                  "address": "67.220.85.46",
+                  "port": 18000,
+                  "users": [
+                    {
+                      "id": "f8c8dc3d-0d37-46b0-8b34-a7232882fcfe",
+                      "alterId": 0,
+                      "security": "auto"
+                    }
+                  ]
+                }
+              ]
+            },
+            "streamSettings": {
+              "network": "tcp"
+            },
+            "tag": "entry-hop"
+          },
+          {
+            "protocol": "freedom",
+            "tag": "direct"
+          }
+        ],
+        "routing": {
+          "rules": [
+            {
+              "type": "field",
+              "outboundTag": "direct",
+              "ip": [
+                "geoip:private"
+              ]
+            }
+          ]
+        }
+      }
+    },
+    {
+      "name": "🇺🇸 -> 🇮🇹 185.164.175.81 Milan SS",
+      "config": {
+        "log": {
+          "loglevel": "warning"
+        },
+        "inbounds": [
+          {
+            "tag": "socks-in",
+            "listen": "127.0.0.1",
+            "port": 10808,
+            "protocol": "socks",
+            "settings": {
+              "auth": "noauth",
+              "udp": true
+            }
+          }
+        ],
+        "outbounds": [
+          {
+            "protocol": "shadowsocks",
+            "settings": {
+              "servers": [
+                {
+                  "address": "185.164.175.81",
+                  "port": 19999,
+                  "method": "aes-256-gcm",
+                  "password": "ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4="
+                }
+              ]
+            },
+            "tag": "exit-hop",
+            "streamSettings": {
+              "sockopt": {
+                "dialerProxy": "entry-hop"
+              }
+            }
+          },
+          {
+            "protocol": "vmess",
+            "settings": {
+              "vnext": [
+                {
+                  "address": "67.220.85.46",
+                  "port": 18000,
+                  "users": [
+                    {
+                      "id": "f8c8dc3d-0d37-46b0-8b34-a7232882fcfe",
+                      "alterId": 0,
+                      "security": "auto"
+                    }
+                  ]
+                }
+              ]
+            },
+            "streamSettings": {
+              "network": "tcp"
+            },
+            "tag": "entry-hop"
+          },
+          {
+            "protocol": "freedom",
+            "tag": "direct"
+          }
+        ],
+        "routing": {
+          "rules": [
+            {
+              "type": "field",
+              "outboundTag": "direct",
+              "ip": [
+                "geoip:private"
+              ]
+            }
+          ]
+        }
+      }
+    },
+    {
+      "name": "🇺🇸 -> 🇪🇸 66.163.118.166 Madrid TR",
+      "config": {
+        "log": {
+          "loglevel": "warning"
+        },
+        "inbounds": [
+          {
+            "tag": "socks-in",
+            "listen": "127.0.0.1",
+            "port": 10808,
+            "protocol": "socks",
+            "settings": {
+              "auth": "noauth",
+              "udp": true
+            }
+          }
+        ],
+        "outbounds": [
+          {
+            "protocol": "trojan",
+            "settings": {
+              "servers": [
+                {
+                  "address": "66.163.118.166",
+                  "port": 443,
+                  "password": "0ab6c98dae3b48e8b9c4a776b6c9c19a"
+                }
+              ]
+            },
+            "streamSettings": {
+              "network": "tcp",
+              "security": "tls",
+              "tlsSettings": {
+                "serverName": "learn.discovergreatjobsandadvanceyourcareer.com",
+                "fingerprint": "chrome"
+              },
+              "sockopt": {
+                "dialerProxy": "entry-hop"
+              }
+            },
+            "tag": "exit-hop"
+          },
+          {
+            "protocol": "vmess",
+            "settings": {
+              "vnext": [
+                {
+                  "address": "67.220.85.46",
+                  "port": 18000,
+                  "users": [
+                    {
+                      "id": "f8c8dc3d-0d37-46b0-8b34-a7232882fcfe",
+                      "alterId": 0,
+                      "security": "auto"
+                    }
+                  ]
+                }
+              ]
+            },
+            "streamSettings": {
+              "network": "tcp"
+            },
+            "tag": "entry-hop"
+          },
+          {
+            "protocol": "freedom",
+            "tag": "direct"
+          }
+        ],
+        "routing": {
+          "rules": [
+            {
+              "type": "field",
+              "outboundTag": "direct",
+              "ip": [
+                "geoip:private"
+              ]
+            }
+          ]
+        }
+      }
+    },
+    {
+      "name": "🇺🇸 -> 🇨🇿 195.123.245.241 Prague VL",
+      "config": {
+        "log": {
+          "loglevel": "warning"
+        },
+        "inbounds": [
+          {
+            "tag": "socks-in",
+            "listen": "127.0.0.1",
+            "port": 10808,
+            "protocol": "socks",
+            "settings": {
+              "auth": "noauth",
+              "udp": true
+            }
+          }
+        ],
+        "outbounds": [
+          {
+            "protocol": "vless",
+            "settings": {
+              "vnext": [
+                {
+                  "address": "195.123.245.241",
+                  "port": 443,
+                  "users": [
+                    {
+                      "id": "7c053ca8-38cc-45e2-930c-eda1fd66f903",
+                      "flow": "xtls-rprx-vision"
+                    }
+                  ]
+                }
+              ]
+            },
+            "streamSettings": {
+              "network": "tcp",
+              "security": "reality",
+              "realitySettings": {
+                "serverName": "gateway.icloud.com",
+                "fingerprint": "chrome",
+                "publicKey": "hlY5ce1UsVIgE46y5PlEZhUsSaXUnCtoDLLaGrhInjw"
+              },
+              "sockopt": {
+                "dialerProxy": "entry-hop"
+              }
+            },
+            "tag": "exit-hop"
+          },
+          {
+            "protocol": "vmess",
+            "settings": {
+              "vnext": [
+                {
+                  "address": "67.220.85.46",
+                  "port": 18000,
+                  "users": [
+                    {
+                      "id": "f8c8dc3d-0d37-46b0-8b34-a7232882fcfe",
+                      "alterId": 0,
+                      "security": "auto"
+                    }
+                  ]
+                }
+              ]
+            },
+            "streamSettings": {
+              "network": "tcp"
+            },
+            "tag": "entry-hop"
+          },
+          {
+            "protocol": "freedom",
+            "tag": "direct"
+          }
+        ],
+        "routing": {
+          "rules": [
+            {
+              "type": "field",
+              "outboundTag": "direct",
+              "ip": [
+                "geoip:private"
+              ]
+            }
+          ]
+        }
+      }
+    },
+    {
+      "name": "🇺🇸 -> 🇯🇵 103.75.118.228 Tokyo VL",
+      "config": {
+        "log": {
+          "loglevel": "warning"
+        },
+        "inbounds": [
+          {
+            "tag": "socks-in",
+            "listen": "127.0.0.1",
+            "port": 10808,
+            "protocol": "socks",
+            "settings": {
+              "auth": "noauth",
+              "udp": true
+            }
+          }
+        ],
+        "outbounds": [
+          {
+            "protocol": "vless",
+            "settings": {
+              "vnext": [
+                {
+                  "address": "103.75.118.228",
+                  "port": 11452,
+                  "users": [
+                    {
+                      "id": "814bd064-544d-4255-a070-5705c03f6da9",
+                      "flow": "xtls-rprx-vision"
+                    }
+                  ]
+                }
+              ]
+            },
+            "streamSettings": {
+              "network": "tcp",
+              "security": "reality",
+              "realitySettings": {
+                "serverName": "www.apple.com",
+                "fingerprint": "chrome",
+                "publicKey": "k2hPp0tTW0Da-HK94wYpSCLbuK44LfGqC2MSJIM1Ti0"
+              },
+              "sockopt": {
+                "dialerProxy": "entry-hop"
+              }
+            },
+            "tag": "exit-hop"
+          },
+          {
+            "protocol": "vmess",
+            "settings": {
+              "vnext": [
+                {
+                  "address": "67.220.85.46",
+                  "port": 18000,
+                  "users": [
+                    {
+                      "id": "f8c8dc3d-0d37-46b0-8b34-a7232882fcfe",
+                      "alterId": 0,
+                      "security": "auto"
+                    }
+                  ]
+                }
+              ]
+            },
+            "streamSettings": {
+              "network": "tcp"
+            },
+            "tag": "entry-hop"
+          },
+          {
+            "protocol": "freedom",
+            "tag": "direct"
+          }
+        ],
+        "routing": {
+          "rules": [
+            {
+              "type": "field",
+              "outboundTag": "direct",
+              "ip": [
+                "geoip:private"
+              ]
+            }
+          ]
+        }
+      }
+    },
+    {
+      "name": "🇺🇸 -> 🇫🇮 95.216.27.15 Helsinki VL",
+      "config": {
+        "log": {
+          "loglevel": "warning"
+        },
+        "inbounds": [
+          {
+            "tag": "socks-in",
+            "listen": "127.0.0.1",
+            "port": 10808,
+            "protocol": "socks",
+            "settings": {
+              "auth": "noauth",
+              "udp": true
+            }
+          }
+        ],
+        "outbounds": [
+          {
+            "protocol": "vless",
+            "settings": {
+              "vnext": [
+                {
+                  "address": "95.216.27.15",
+                  "port": 2053,
+                  "users": [
+                    {
+                      "id": "b79d736d-0f10-4169-b626-362059d18204",
+                      "flow": ""
+                    }
+                  ]
+                }
+              ]
+            },
+            "streamSettings": {
+              "network": "tcp",
+              "security": "reality",
+              "realitySettings": {
+                "serverName": "www.cloudflare.com",
+                "fingerprint": "chrome",
+                "publicKey": "aiHdxKOzcFZDILKj3MIPrMsyT0XxMy_O6xoxnz6MIWs"
+              },
+              "sockopt": {
+                "dialerProxy": "entry-hop"
+              }
+            },
+            "tag": "exit-hop"
+          },
+          {
+            "protocol": "vmess",
+            "settings": {
+              "vnext": [
+                {
+                  "address": "67.220.85.46",
+                  "port": 18000,
+                  "users": [
+                    {
+                      "id": "f8c8dc3d-0d37-46b0-8b34-a7232882fcfe",
+                      "alterId": 0,
+                      "security": "auto"
+                    }
+                  ]
+                }
+              ]
+            },
+            "streamSettings": {
+              "network": "tcp"
+            },
+            "tag": "entry-hop"
+          },
+          {
+            "protocol": "freedom",
+            "tag": "direct"
+          }
+        ],
+        "routing": {
+          "rules": [
+            {
+              "type": "field",
+              "outboundTag": "direct",
+              "ip": [
+                "geoip:private"
+              ]
+            }
+          ]
+        }
+      }
+    },
+    {
+      "name": "🇺🇸 -> 🇨🇭 107.189.7.176 Roost VL",
+      "config": {
+        "log": {
+          "loglevel": "warning"
+        },
+        "inbounds": [
+          {
+            "tag": "socks-in",
+            "listen": "127.0.0.1",
+            "port": 10808,
+            "protocol": "socks",
+            "settings": {
+              "auth": "noauth",
+              "udp": true
+            }
+          }
+        ],
+        "outbounds": [
+          {
+            "protocol": "vless",
+            "settings": {
+              "vnext": [
+                {
+                  "address": "107.189.7.176",
+                  "port": 32752,
+                  "users": [
+                    {
+                      "id": "4970c1cd-13e1-498a-920a-61d07be2fa65",
+                      "flow": ""
+                    }
+                  ]
+                }
+              ]
+            },
+            "streamSettings": {
+              "network": "tcp",
+              "security": "reality",
+              "realitySettings": {
+                "serverName": "www.apple.com",
+                "fingerprint": "chrome",
+                "publicKey": "pfFcQxKv4EPhCDUoZMCmTjj4FK7HHQg_me-In3bOejA"
+              },
+              "sockopt": {
+                "dialerProxy": "entry-hop"
+              }
+            },
+            "tag": "exit-hop"
+          },
+          {
+            "protocol": "vmess",
+            "settings": {
+              "vnext": [
+                {
+                  "address": "67.220.85.46",
+                  "port": 18000,
+                  "users": [
+                    {
+                      "id": "f8c8dc3d-0d37-46b0-8b34-a7232882fcfe",
+                      "alterId": 0,
+                      "security": "auto"
+                    }
+                  ]
+                }
+              ]
+            },
+            "streamSettings": {
+              "network": "tcp"
+            },
+            "tag": "entry-hop"
+          },
+          {
+            "protocol": "freedom",
+            "tag": "direct"
+          }
+        ],
+        "routing": {
+          "rules": [
+            {
+              "type": "field",
+              "outboundTag": "direct",
+              "ip": [
+                "geoip:private"
+              ]
+            }
+          ]
+        }
+      }
+    },
+    {
+      "name": "🇺🇸 -> 🇮🇪 54.229.151.97 Dublin VM",
+      "config": {
+        "log": {
+          "loglevel": "warning"
+        },
+        "inbounds": [
+          {
+            "tag": "socks-in",
+            "listen": "127.0.0.1",
+            "port": 10808,
+            "protocol": "socks",
+            "settings": {
+              "auth": "noauth",
+              "udp": true
+            }
+          }
+        ],
+        "outbounds": [
+          {
+            "protocol": "vmess",
+            "settings": {
+              "vnext": [
+                {
+                  "address": "54.229.151.97",
+                  "port": 59236,
+                  "users": [
+                    {
+                      "id": "2387bfbc-10a6-4bd7-dc55-7cba954ce6e8",
+                      "alterId": 0,
+                      "security": "auto"
+                    }
+                  ]
+                }
+              ]
+            },
+            "streamSettings": {
+              "network": "tcp",
+              "sockopt": {
+                "dialerProxy": "entry-hop"
+              }
+            },
+            "tag": "exit-hop"
+          },
+          {
+            "protocol": "vmess",
+            "settings": {
+              "vnext": [
+                {
+                  "address": "67.220.85.46",
+                  "port": 18000,
+                  "users": [
+                    {
+                      "id": "f8c8dc3d-0d37-46b0-8b34-a7232882fcfe",
+                      "alterId": 0,
+                      "security": "auto"
+                    }
+                  ]
+                }
+              ]
+            },
+            "streamSettings": {
+              "network": "tcp"
+            },
+            "tag": "entry-hop"
+          },
+          {
+            "protocol": "freedom",
+            "tag": "direct"
+          }
+        ],
+        "routing": {
+          "rules": [
+            {
+              "type": "field",
+              "outboundTag": "direct",
+              "ip": [
+                "geoip:private"
+              ]
+            }
+          ]
+        }
+      }
+    },
+    {
+      "name": "🇺🇸 -> 🇫🇷 51.77.217.70 Roubaix VL",
+      "config": {
+        "log": {
+          "loglevel": "warning"
+        },
+        "inbounds": [
+          {
+            "tag": "socks-in",
+            "listen": "127.0.0.1",
+            "port": 10808,
+            "protocol": "socks",
+            "settings": {
+              "auth": "noauth",
+              "udp": true
+            }
+          }
+        ],
+        "outbounds": [
+          {
+            "protocol": "vless",
+            "settings": {
+              "vnext": [
+                {
+                  "address": "51.77.217.70",
+                  "port": 2053,
+                  "users": [
+                    {
+                      "id": "bf16ee0c-8b3c-41e4-ab3a-8b48033c404e",
+                      "flow": ""
+                    }
+                  ]
+                }
+              ]
+            },
+            "streamSettings": {
+              "network": "tcp",
+              "security": "reality",
+              "realitySettings": {
+                "serverName": "www.apple.com",
+                "fingerprint": "random",
+                "publicKey": "g63cT3uI0Y5iUtj3m__RYz7nmR1eIK4AYikdnZCl63w"
+              },
+              "sockopt": {
+                "dialerProxy": "entry-hop"
+              }
+            },
+            "tag": "exit-hop"
+          },
+          {
+            "protocol": "vmess",
+            "settings": {
+              "vnext": [
+                {
+                  "address": "67.220.85.46",
+                  "port": 18000,
+                  "users": [
+                    {
+                      "id": "f8c8dc3d-0d37-46b0-8b34-a7232882fcfe",
+                      "alterId": 0,
+                      "security": "auto"
+                    }
+                  ]
+                }
+              ]
+            },
+            "streamSettings": {
+              "network": "tcp"
+            },
+            "tag": "entry-hop"
+          },
+          {
+            "protocol": "freedom",
+            "tag": "direct"
+          }
+        ],
+        "routing": {
+          "rules": [
+            {
+              "type": "field",
+              "outboundTag": "direct",
+              "ip": [
+                "geoip:private"
+              ]
+            }
+          ]
+        }
+      }
+    },
+    {
+      "name": "🇺🇸 -> 🇸🇪 46.29.255.123 Washington VL",
+      "config": {
+        "log": {
+          "loglevel": "warning"
+        },
+        "inbounds": [
+          {
+            "tag": "socks-in",
+            "listen": "127.0.0.1",
+            "port": 10808,
+            "protocol": "socks",
+            "settings": {
+              "auth": "noauth",
+              "udp": true
+            }
+          }
+        ],
+        "outbounds": [
+          {
+            "protocol": "vless",
+            "settings": {
+              "vnext": [
+                {
+                  "address": "46.29.255.123",
+                  "port": 59539,
+                  "users": [
+                    {
+                      "id": "30572b57-f5ab-4eb8-82d4-a24d399b99f6",
+                      "flow": "xtls-rprx-vision"
+                    }
+                  ]
+                }
+              ]
+            },
+            "streamSettings": {
+              "network": "tcp",
+              "security": "reality",
+              "realitySettings": {
+                "serverName": "cloudflare-dns.com",
+                "fingerprint": "firefox",
+                "publicKey": "R6mPqCsjZMWauci4LHw7Qp1LGKmBd-sxMXplyOn9bSQ"
+              },
+              "sockopt": {
+                "dialerProxy": "entry-hop"
+              }
+            },
+            "tag": "exit-hop"
+          },
+          {
+            "protocol": "vmess",
+            "settings": {
+              "vnext": [
+                {
+                  "address": "67.220.85.46",
+                  "port": 18000,
+                  "users": [
+                    {
+                      "id": "f8c8dc3d-0d37-46b0-8b34-a7232882fcfe",
+                      "alterId": 0,
+                      "security": "auto"
+                    }
+                  ]
+                }
+              ]
+            },
+            "streamSettings": {
+              "network": "tcp"
+            },
+            "tag": "entry-hop"
+          },
+          {
+            "protocol": "freedom",
+            "tag": "direct"
+          }
+        ],
+        "routing": {
+          "rules": [
+            {
+              "type": "field",
+              "outboundTag": "direct",
+              "ip": [
+                "geoip:private"
+              ]
+            }
+          ]
+        }
+      }
+    },
+    {
+      "name": "🇺🇸 -> 🇨🇴 149.104.107.41 Bogotá SS",
+      "config": {
+        "log": {
+          "loglevel": "warning"
+        },
+        "inbounds": [
+          {
+            "tag": "socks-in",
+            "listen": "127.0.0.1",
+            "port": 10808,
+            "protocol": "socks",
+            "settings": {
+              "auth": "noauth",
+              "udp": true
+            }
+          }
+        ],
+        "outbounds": [
+          {
+            "protocol": "shadowsocks",
+            "settings": {
+              "servers": [
+                {
+                  "address": "149.104.107.41",
+                  "port": 8090,
+                  "method": "aes-256-gcm",
+                  "password": "PCnnH6SQSnfoS27"
+                }
+              ]
+            },
+            "tag": "exit-hop",
+            "streamSettings": {
+              "sockopt": {
+                "dialerProxy": "entry-hop"
+              }
+            }
+          },
+          {
+            "protocol": "vmess",
+            "settings": {
+              "vnext": [
+                {
+                  "address": "67.220.85.46",
+                  "port": 18000,
+                  "users": [
+                    {
+                      "id": "f8c8dc3d-0d37-46b0-8b34-a7232882fcfe",
+                      "alterId": 0,
+                      "security": "auto"
+                    }
+                  ]
+                }
+              ]
+            },
+            "streamSettings": {
+              "network": "tcp"
+            },
+            "tag": "entry-hop"
+          },
+          {
+            "protocol": "freedom",
+            "tag": "direct"
+          }
+        ],
+        "routing": {
+          "rules": [
+            {
+              "type": "field",
+              "outboundTag": "direct",
+              "ip": [
+                "geoip:private"
+              ]
+            }
+          ]
+        }
+      }
+    },
+    {
+      "name": "🇺🇸 -> 🇺🇸 185.215.132.9 Atlanta SS",
+      "config": {
+        "log": {
+          "loglevel": "warning"
+        },
+        "inbounds": [
+          {
+            "tag": "socks-in",
+            "listen": "127.0.0.1",
+            "port": 10808,
+            "protocol": "socks",
+            "settings": {
+              "auth": "noauth",
+              "udp": true
+            }
+          }
+        ],
+        "outbounds": [
+          {
+            "protocol": "shadowsocks",
+            "settings": {
+              "servers": [
+                {
+                  "address": "185.215.132.9",
+                  "port": 19999,
+                  "method": "aes-256-gcm",
+                  "password": "ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4="
+                }
+              ]
+            },
+            "tag": "exit-hop",
+            "streamSettings": {
+              "sockopt": {
+                "dialerProxy": "entry-hop"
+              }
+            }
+          },
+          {
+            "protocol": "vmess",
+            "settings": {
+              "vnext": [
+                {
+                  "address": "67.220.85.46",
+                  "port": 18000,
+                  "users": [
+                    {
+                      "id": "f8c8dc3d-0d37-46b0-8b34-a7232882fcfe",
+                      "alterId": 0,
+                      "security": "auto"
+                    }
+                  ]
+                }
+              ]
+            },
+            "streamSettings": {
+              "network": "tcp"
+            },
+            "tag": "entry-hop"
+          },
+          {
+            "protocol": "freedom",
+            "tag": "direct"
+          }
+        ],
+        "routing": {
+          "rules": [
+            {
+              "type": "field",
+              "outboundTag": "direct",
+              "ip": [
+                "geoip:private"
+              ]
+            }
+          ]
+        }
+      }
+    },
+    {
+      "name": "🇺🇸 -> 🇲🇽 216.238.80.100 Querétaro City TR",
+      "config": {
+        "log": {
+          "loglevel": "warning"
+        },
+        "inbounds": [
+          {
+            "tag": "socks-in",
+            "listen": "127.0.0.1",
+            "port": 10808,
+            "protocol": "socks",
+            "settings": {
+              "auth": "noauth",
+              "udp": true
+            }
+          }
+        ],
+        "outbounds": [
+          {
+            "protocol": "trojan",
+            "settings": {
+              "servers": [
+                {
+                  "address": "216.238.80.100",
+                  "port": 443,
+                  "password": "0ab6c98dae3b48e8b9c4a776b6c9c19a"
+                }
+              ]
+            },
+            "streamSettings": {
+              "network": "tcp",
+              "security": "tls",
+              "tlsSettings": {
+                "serverName": "connectwithtopemployersandfindidealjobs.com",
+                "fingerprint": "chrome"
+              },
+              "sockopt": {
+                "dialerProxy": "entry-hop"
+              }
+            },
+            "tag": "exit-hop"
+          },
+          {
+            "protocol": "vmess",
+            "settings": {
+              "vnext": [
+                {
+                  "address": "67.220.85.46",
+                  "port": 18000,
+                  "users": [
+                    {
+                      "id": "f8c8dc3d-0d37-46b0-8b34-a7232882fcfe",
+                      "alterId": 0,
+                      "security": "auto"
+                    }
+                  ]
+                }
+              ]
+            },
+            "streamSettings": {
+              "network": "tcp"
+            },
+            "tag": "entry-hop"
+          },
+          {
+            "protocol": "freedom",
+            "tag": "direct"
+          }
+        ],
+        "routing": {
+          "rules": [
+            {
+              "type": "field",
+              "outboundTag": "direct",
+              "ip": [
+                "geoip:private"
+              ]
+            }
+          ]
+        }
+      }
+    },
+    {
+      "name": "🇺🇸 -> 🇬🇧 185.176.206.9 City of London SS",
+      "config": {
+        "log": {
+          "loglevel": "warning"
+        },
+        "inbounds": [
+          {
+            "tag": "socks-in",
+            "listen": "127.0.0.1",
+            "port": 10808,
+            "protocol": "socks",
+            "settings": {
+              "auth": "noauth",
+              "udp": true
+            }
+          }
+        ],
+        "outbounds": [
+          {
+            "protocol": "shadowsocks",
+            "settings": {
+              "servers": [
+                {
+                  "address": "185.176.206.9",
+                  "port": 19999,
+                  "method": "aes-256-gcm",
+                  "password": "ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4="
+                }
+              ]
+            },
+            "tag": "exit-hop",
+            "streamSettings": {
+              "sockopt": {
+                "dialerProxy": "entry-hop"
+              }
+            }
+          },
+          {
+            "protocol": "vmess",
+            "settings": {
+              "vnext": [
+                {
+                  "address": "67.220.85.46",
+                  "port": 18000,
+                  "users": [
+                    {
+                      "id": "f8c8dc3d-0d37-46b0-8b34-a7232882fcfe",
+                      "alterId": 0,
+                      "security": "auto"
+                    }
+                  ]
+                }
+              ]
+            },
+            "streamSettings": {
+              "network": "tcp"
+            },
+            "tag": "entry-hop"
+          },
+          {
+            "protocol": "freedom",
+            "tag": "direct"
+          }
+        ],
+        "routing": {
+          "rules": [
+            {
+              "type": "field",
+              "outboundTag": "direct",
+              "ip": [
+                "geoip:private"
+              ]
+            }
+          ]
+        }
+      }
+    },
+    {
+      "name": "🇺🇸 -> 🇩🇪 jdwabxe.cvewfjg.shop Unknown VL",
+      "config": {
+        "log": {
+          "loglevel": "warning"
+        },
+        "inbounds": [
+          {
+            "tag": "socks-in",
+            "listen": "127.0.0.1",
+            "port": 10808,
+            "protocol": "socks",
+            "settings": {
+              "auth": "noauth",
+              "udp": true
+            }
+          }
+        ],
+        "outbounds": [
+          {
+            "protocol": "vless",
+            "settings": {
+              "vnext": [
+                {
+                  "address": "jdwabxe.cvewfjg.shop",
+                  "port": 443,
+                  "users": [
+                    {
+                      "id": "711c018e-2692-4aa8-93f3-544d83fcd16c",
+                      "flow": "xtls-rprx-vision"
+                    }
+                  ]
+                }
+              ]
+            },
+            "streamSettings": {
+              "network": "raw",
+              "security": "reality",
+              "realitySettings": {
+                "serverName": "www.cloudflare.com",
+                "fingerprint": "chrome",
+                "publicKey": "HyVSZ2OyySwXT-xRhTAqoiuYflIaj_b0Jxm7S1Iq9hs"
+              },
+              "sockopt": {
+                "dialerProxy": "entry-hop"
+              }
+            },
+            "tag": "exit-hop"
+          },
+          {
+            "protocol": "vmess",
+            "settings": {
+              "vnext": [
+                {
+                  "address": "67.220.85.46",
+                  "port": 18000,
+                  "users": [
+                    {
+                      "id": "f8c8dc3d-0d37-46b0-8b34-a7232882fcfe",
+                      "alterId": 0,
+                      "security": "auto"
+                    }
+                  ]
+                }
+              ]
+            },
+            "streamSettings": {
+              "network": "tcp"
+            },
+            "tag": "entry-hop"
+          },
+          {
+            "protocol": "freedom",
+            "tag": "direct"
+          }
+        ],
+        "routing": {
+          "rules": [
+            {
+              "type": "field",
+              "outboundTag": "direct",
+              "ip": [
+                "geoip:private"
+              ]
+            }
+          ]
+        }
+      }
+    },
+    {
+      "name": "🇺🇸 -> 🇵🇱 70.34.252.255 Warsaw TR",
+      "config": {
+        "log": {
+          "loglevel": "warning"
+        },
+        "inbounds": [
+          {
+            "tag": "socks-in",
+            "listen": "127.0.0.1",
+            "port": 10808,
+            "protocol": "socks",
+            "settings": {
+              "auth": "noauth",
+              "udp": true
+            }
+          }
+        ],
+        "outbounds": [
+          {
+            "protocol": "trojan",
+            "settings": {
+              "servers": [
+                {
+                  "address": "70.34.252.255",
+                  "port": 443,
+                  "password": "0ab6c98dae3b48e8b9c4a776b6c9c19a"
+                }
+              ]
+            },
+            "streamSettings": {
+              "network": "tcp",
+              "security": "tls",
+              "tlsSettings": {
+                "serverName": "browseexecutivejobopeningsandenhanceleadershipcareer.com",
+                "fingerprint": "chrome"
+              },
+              "sockopt": {
+                "dialerProxy": "entry-hop"
+              }
+            },
+            "tag": "exit-hop"
+          },
+          {
+            "protocol": "vmess",
+            "settings": {
+              "vnext": [
+                {
+                  "address": "67.220.85.46",
+                  "port": 18000,
+                  "users": [
+                    {
+                      "id": "f8c8dc3d-0d37-46b0-8b34-a7232882fcfe",
+                      "alterId": 0,
+                      "security": "auto"
+                    }
+                  ]
+                }
+              ]
+            },
+            "streamSettings": {
+              "network": "tcp"
+            },
+            "tag": "entry-hop"
+          },
+          {
+            "protocol": "freedom",
+            "tag": "direct"
+          }
+        ],
+        "routing": {
+          "rules": [
+            {
+              "type": "field",
+              "outboundTag": "direct",
+              "ip": [
+                "geoip:private"
+              ]
+            }
+          ]
+        }
+      }
+    },
+    {
+      "name": "🇺🇸 -> 🇨🇱 64.176.7.205 Santiago TR",
+      "config": {
+        "log": {
+          "loglevel": "warning"
+        },
+        "inbounds": [
+          {
+            "tag": "socks-in",
+            "listen": "127.0.0.1",
+            "port": 10808,
+            "protocol": "socks",
+            "settings": {
+              "auth": "noauth",
+              "udp": true
+            }
+          }
+        ],
+        "outbounds": [
+          {
+            "protocol": "trojan",
+            "settings": {
+              "servers": [
+                {
+                  "address": "64.176.7.205",
+                  "port": 443,
+                  "password": "0ab6c98dae3b48e8b9c4a776b6c9c19a"
+                }
+              ]
+            },
+            "streamSettings": {
+              "network": "tcp",
+              "security": "tls",
+              "tlsSettings": {
+                "serverName": "advanceyouremploymentskillsandcareerdevelopmenthub.com",
+                "fingerprint": "chrome"
+              },
+              "sockopt": {
+                "dialerProxy": "entry-hop"
+              }
+            },
+            "tag": "exit-hop"
+          },
+          {
+            "protocol": "vmess",
+            "settings": {
+              "vnext": [
+                {
+                  "address": "67.220.85.46",
+                  "port": 18000,
+                  "users": [
+                    {
+                      "id": "f8c8dc3d-0d37-46b0-8b34-a7232882fcfe",
+                      "alterId": 0,
+                      "security": "auto"
+                    }
+                  ]
+                }
+              ]
+            },
+            "streamSettings": {
+              "network": "tcp"
+            },
+            "tag": "entry-hop"
+          },
+          {
+            "protocol": "freedom",
+            "tag": "direct"
+          }
+        ],
+        "routing": {
+          "rules": [
+            {
+              "type": "field",
+              "outboundTag": "direct",
+              "ip": [
+                "geoip:private"
+              ]
+            }
+          ]
+        }
+      }
+    },
+    {
+      "name": "🇺🇸 -> 🇳🇱 193.29.139.223 Amsterdam SS",
+      "config": {
+        "log": {
+          "loglevel": "warning"
+        },
+        "inbounds": [
+          {
+            "tag": "socks-in",
+            "listen": "127.0.0.1",
+            "port": 10808,
+            "protocol": "socks",
+            "settings": {
+              "auth": "noauth",
+              "udp": true
+            }
+          }
+        ],
+        "outbounds": [
+          {
+            "protocol": "shadowsocks",
+            "settings": {
+              "servers": [
+                {
+                  "address": "193.29.139.223",
+                  "port": 8080,
+                  "method": "chacha20-ietf-poly1305",
+                  "password": "k1dBOmOB4oqi7Ump37a1bQ"
+                }
+              ]
+            },
+            "tag": "exit-hop",
+            "streamSettings": {
+              "sockopt": {
+                "dialerProxy": "entry-hop"
+              }
+            }
+          },
+          {
+            "protocol": "vmess",
+            "settings": {
+              "vnext": [
+                {
+                  "address": "67.220.85.46",
+                  "port": 18000,
+                  "users": [
+                    {
+                      "id": "f8c8dc3d-0d37-46b0-8b34-a7232882fcfe",
+                      "alterId": 0,
+                      "security": "auto"
+                    }
+                  ]
+                }
+              ]
+            },
+            "streamSettings": {
+              "network": "tcp"
+            },
+            "tag": "entry-hop"
+          },
+          {
+            "protocol": "freedom",
+            "tag": "direct"
+          }
+        ],
+        "routing": {
+          "rules": [
+            {
+              "type": "field",
+              "outboundTag": "direct",
+              "ip": [
+                "geoip:private"
+              ]
+            }
+          ]
+        }
+      }
+    },
+    {
+      "name": "🇺🇸 -> 🇦🇹 82.110.60.9 London SS",
+      "config": {
+        "log": {
+          "loglevel": "warning"
+        },
+        "inbounds": [
+          {
+            "tag": "socks-in",
+            "listen": "127.0.0.1",
+            "port": 10808,
+            "protocol": "socks",
+            "settings": {
+              "auth": "noauth",
+              "udp": true
+            }
+          }
+        ],
+        "outbounds": [
+          {
+            "protocol": "shadowsocks",
+            "settings": {
+              "servers": [
+                {
+                  "address": "82.110.60.9",
+                  "port": 19999,
+                  "method": "aes-256-gcm",
+                  "password": "ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4="
+                }
+              ]
+            },
+            "tag": "exit-hop",
+            "streamSettings": {
+              "sockopt": {
+                "dialerProxy": "entry-hop"
+              }
+            }
+          },
+          {
+            "protocol": "vmess",
+            "settings": {
+              "vnext": [
+                {
+                  "address": "67.220.85.46",
+                  "port": 18000,
+                  "users": [
+                    {
+                      "id": "f8c8dc3d-0d37-46b0-8b34-a7232882fcfe",
+                      "alterId": 0,
+                      "security": "auto"
+                    }
+                  ]
+                }
+              ]
+            },
+            "streamSettings": {
+              "network": "tcp"
+            },
+            "tag": "entry-hop"
+          },
+          {
+            "protocol": "freedom",
+            "tag": "direct"
+          }
+        ],
+        "routing": {
+          "rules": [
+            {
+              "type": "field",
+              "outboundTag": "direct",
+              "ip": [
+                "geoip:private"
+              ]
+            }
+          ]
+        }
+      }
+    },
+    {
+      "name": "🇺🇸 -> 🇮🇹 185.164.175.81 Milan SS",
+      "config": {
+        "log": {
+          "loglevel": "warning"
+        },
+        "inbounds": [
+          {
+            "tag": "socks-in",
+            "listen": "127.0.0.1",
+            "port": 10808,
+            "protocol": "socks",
+            "settings": {
+              "auth": "noauth",
+              "udp": true
+            }
+          }
+        ],
+        "outbounds": [
+          {
+            "protocol": "shadowsocks",
+            "settings": {
+              "servers": [
+                {
+                  "address": "185.164.175.81",
+                  "port": 19999,
+                  "method": "aes-256-gcm",
+                  "password": "ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4="
+                }
+              ]
+            },
+            "tag": "exit-hop",
+            "streamSettings": {
+              "sockopt": {
+                "dialerProxy": "entry-hop"
+              }
+            }
+          },
+          {
+            "protocol": "vmess",
+            "settings": {
+              "vnext": [
+                {
+                  "address": "67.220.85.46",
+                  "port": 18000,
+                  "users": [
+                    {
+                      "id": "f8c8dc3d-0d37-46b0-8b34-a7232882fcfe",
+                      "alterId": 0,
+                      "security": "auto"
+                    }
+                  ]
+                }
+              ]
+            },
+            "streamSettings": {
+              "network": "tcp"
+            },
+            "tag": "entry-hop"
+          },
+          {
+            "protocol": "freedom",
+            "tag": "direct"
+          }
+        ],
+        "routing": {
+          "rules": [
+            {
+              "type": "field",
+              "outboundTag": "direct",
+              "ip": [
+                "geoip:private"
+              ]
+            }
+          ]
+        }
+      }
+    },
+    {
+      "name": "🇺🇸 -> 🇪🇸 66.163.118.166 Madrid TR",
+      "config": {
+        "log": {
+          "loglevel": "warning"
+        },
+        "inbounds": [
+          {
+            "tag": "socks-in",
+            "listen": "127.0.0.1",
+            "port": 10808,
+            "protocol": "socks",
+            "settings": {
+              "auth": "noauth",
+              "udp": true
+            }
+          }
+        ],
+        "outbounds": [
+          {
+            "protocol": "trojan",
+            "settings": {
+              "servers": [
+                {
+                  "address": "66.163.118.166",
+                  "port": 443,
+                  "password": "0ab6c98dae3b48e8b9c4a776b6c9c19a"
+                }
+              ]
+            },
+            "streamSettings": {
+              "network": "tcp",
+              "security": "tls",
+              "tlsSettings": {
+                "serverName": "learn.discovergreatjobsandadvanceyourcareer.com",
+                "fingerprint": "chrome"
+              },
+              "sockopt": {
+                "dialerProxy": "entry-hop"
+              }
+            },
+            "tag": "exit-hop"
+          },
+          {
+            "protocol": "vmess",
+            "settings": {
+              "vnext": [
+                {
+                  "address": "67.220.85.46",
+                  "port": 18000,
+                  "users": [
+                    {
+                      "id": "f8c8dc3d-0d37-46b0-8b34-a7232882fcfe",
+                      "alterId": 0,
+                      "security": "auto"
+                    }
+                  ]
+                }
+              ]
+            },
+            "streamSettings": {
+              "network": "tcp"
+            },
+            "tag": "entry-hop"
+          },
+          {
+            "protocol": "freedom",
+            "tag": "direct"
+          }
+        ],
+        "routing": {
+          "rules": [
+            {
+              "type": "field",
+              "outboundTag": "direct",
+              "ip": [
+                "geoip:private"
+              ]
+            }
+          ]
+        }
+      }
+    },
+    {
+      "name": "🇺🇸 -> 🇨🇿 195.123.245.241 Prague VL",
+      "config": {
+        "log": {
+          "loglevel": "warning"
+        },
+        "inbounds": [
+          {
+            "tag": "socks-in",
+            "listen": "127.0.0.1",
+            "port": 10808,
+            "protocol": "socks",
+            "settings": {
+              "auth": "noauth",
+              "udp": true
+            }
+          }
+        ],
+        "outbounds": [
+          {
+            "protocol": "vless",
+            "settings": {
+              "vnext": [
+                {
+                  "address": "195.123.245.241",
+                  "port": 443,
+                  "users": [
+                    {
+                      "id": "7c053ca8-38cc-45e2-930c-eda1fd66f903",
+                      "flow": "xtls-rprx-vision"
+                    }
+                  ]
+                }
+              ]
+            },
+            "streamSettings": {
+              "network": "tcp",
+              "security": "reality",
+              "realitySettings": {
+                "serverName": "gateway.icloud.com",
+                "fingerprint": "chrome",
+                "publicKey": "hlY5ce1UsVIgE46y5PlEZhUsSaXUnCtoDLLaGrhInjw"
+              },
+              "sockopt": {
+                "dialerProxy": "entry-hop"
+              }
+            },
+            "tag": "exit-hop"
+          },
+          {
+            "protocol": "vmess",
+            "settings": {
+              "vnext": [
+                {
+                  "address": "67.220.85.46",
+                  "port": 18000,
+                  "users": [
+                    {
+                      "id": "f8c8dc3d-0d37-46b0-8b34-a7232882fcfe",
+                      "alterId": 0,
+                      "security": "auto"
+                    }
+                  ]
+                }
+              ]
+            },
+            "streamSettings": {
+              "network": "tcp"
+            },
+            "tag": "entry-hop"
+          },
+          {
+            "protocol": "freedom",
+            "tag": "direct"
+          }
+        ],
+        "routing": {
+          "rules": [
+            {
+              "type": "field",
+              "outboundTag": "direct",
+              "ip": [
+                "geoip:private"
+              ]
+            }
+          ]
+        }
+      }
+    },
+    {
+      "name": "🇺🇸 -> 🇯🇵 103.75.118.228 Tokyo VL",
+      "config": {
+        "log": {
+          "loglevel": "warning"
+        },
+        "inbounds": [
+          {
+            "tag": "socks-in",
+            "listen": "127.0.0.1",
+            "port": 10808,
+            "protocol": "socks",
+            "settings": {
+              "auth": "noauth",
+              "udp": true
+            }
+          }
+        ],
+        "outbounds": [
+          {
+            "protocol": "vless",
+            "settings": {
+              "vnext": [
+                {
+                  "address": "103.75.118.228",
+                  "port": 11452,
+                  "users": [
+                    {
+                      "id": "814bd064-544d-4255-a070-5705c03f6da9",
+                      "flow": "xtls-rprx-vision"
+                    }
+                  ]
+                }
+              ]
+            },
+            "streamSettings": {
+              "network": "tcp",
+              "security": "reality",
+              "realitySettings": {
+                "serverName": "www.apple.com",
+                "fingerprint": "chrome",
+                "publicKey": "k2hPp0tTW0Da-HK94wYpSCLbuK44LfGqC2MSJIM1Ti0"
+              },
+              "sockopt": {
+                "dialerProxy": "entry-hop"
+              }
+            },
+            "tag": "exit-hop"
+          },
+          {
+            "protocol": "vmess",
+            "settings": {
+              "vnext": [
+                {
+                  "address": "67.220.85.46",
+                  "port": 18000,
+                  "users": [
+                    {
+                      "id": "f8c8dc3d-0d37-46b0-8b34-a7232882fcfe",
+                      "alterId": 0,
+                      "security": "auto"
+                    }
+                  ]
+                }
+              ]
+            },
+            "streamSettings": {
+              "network": "tcp"
+            },
+            "tag": "entry-hop"
+          },
+          {
+            "protocol": "freedom",
+            "tag": "direct"
+          }
+        ],
+        "routing": {
+          "rules": [
+            {
+              "type": "field",
+              "outboundTag": "direct",
+              "ip": [
+                "geoip:private"
+              ]
+            }
+          ]
+        }
+      }
+    },
+    {
+      "name": "🇺🇸 -> 🇫🇮 95.216.27.15 Helsinki VL",
+      "config": {
+        "log": {
+          "loglevel": "warning"
+        },
+        "inbounds": [
+          {
+            "tag": "socks-in",
+            "listen": "127.0.0.1",
+            "port": 10808,
+            "protocol": "socks",
+            "settings": {
+              "auth": "noauth",
+              "udp": true
+            }
+          }
+        ],
+        "outbounds": [
+          {
+            "protocol": "vless",
+            "settings": {
+              "vnext": [
+                {
+                  "address": "95.216.27.15",
+                  "port": 2053,
+                  "users": [
+                    {
+                      "id": "b79d736d-0f10-4169-b626-362059d18204",
+                      "flow": ""
+                    }
+                  ]
+                }
+              ]
+            },
+            "streamSettings": {
+              "network": "tcp",
+              "security": "reality",
+              "realitySettings": {
+                "serverName": "www.cloudflare.com",
+                "fingerprint": "chrome",
+                "publicKey": "aiHdxKOzcFZDILKj3MIPrMsyT0XxMy_O6xoxnz6MIWs"
+              },
+              "sockopt": {
+                "dialerProxy": "entry-hop"
+              }
+            },
+            "tag": "exit-hop"
+          },
+          {
+            "protocol": "vmess",
+            "settings": {
+              "vnext": [
+                {
+                  "address": "67.220.85.46",
+                  "port": 18000,
+                  "users": [
+                    {
+                      "id": "f8c8dc3d-0d37-46b0-8b34-a7232882fcfe",
+                      "alterId": 0,
+                      "security": "auto"
+                    }
+                  ]
+                }
+              ]
+            },
+            "streamSettings": {
+              "network": "tcp"
+            },
+            "tag": "entry-hop"
+          },
+          {
+            "protocol": "freedom",
+            "tag": "direct"
+          }
+        ],
+        "routing": {
+          "rules": [
+            {
+              "type": "field",
+              "outboundTag": "direct",
+              "ip": [
+                "geoip:private"
+              ]
+            }
+          ]
+        }
+      }
+    },
+    {
+      "name": "🇺🇸 -> 🇨🇭 107.189.7.176 Roost VL",
+      "config": {
+        "log": {
+          "loglevel": "warning"
+        },
+        "inbounds": [
+          {
+            "tag": "socks-in",
+            "listen": "127.0.0.1",
+            "port": 10808,
+            "protocol": "socks",
+            "settings": {
+              "auth": "noauth",
+              "udp": true
+            }
+          }
+        ],
+        "outbounds": [
+          {
+            "protocol": "vless",
+            "settings": {
+              "vnext": [
+                {
+                  "address": "107.189.7.176",
+                  "port": 32752,
+                  "users": [
+                    {
+                      "id": "4970c1cd-13e1-498a-920a-61d07be2fa65",
+                      "flow": ""
+                    }
+                  ]
+                }
+              ]
+            },
+            "streamSettings": {
+              "network": "tcp",
+              "security": "reality",
+              "realitySettings": {
+                "serverName": "www.apple.com",
+                "fingerprint": "chrome",
+                "publicKey": "pfFcQxKv4EPhCDUoZMCmTjj4FK7HHQg_me-In3bOejA"
+              },
+              "sockopt": {
+                "dialerProxy": "entry-hop"
+              }
+            },
+            "tag": "exit-hop"
+          },
+          {
+            "protocol": "vmess",
+            "settings": {
+              "vnext": [
+                {
+                  "address": "67.220.85.46",
+                  "port": 18000,
+                  "users": [
+                    {
+                      "id": "f8c8dc3d-0d37-46b0-8b34-a7232882fcfe",
+                      "alterId": 0,
+                      "security": "auto"
+                    }
+                  ]
+                }
+              ]
+            },
+            "streamSettings": {
+              "network": "tcp"
+            },
+            "tag": "entry-hop"
+          },
+          {
+            "protocol": "freedom",
+            "tag": "direct"
+          }
+        ],
+        "routing": {
+          "rules": [
+            {
+              "type": "field",
+              "outboundTag": "direct",
+              "ip": [
+                "geoip:private"
+              ]
+            }
+          ]
+        }
+      }
+    },
+    {
+      "name": "🇺🇸 -> 🇮🇪 54.229.151.97 Dublin VM",
+      "config": {
+        "log": {
+          "loglevel": "warning"
+        },
+        "inbounds": [
+          {
+            "tag": "socks-in",
+            "listen": "127.0.0.1",
+            "port": 10808,
+            "protocol": "socks",
+            "settings": {
+              "auth": "noauth",
+              "udp": true
+            }
+          }
+        ],
+        "outbounds": [
+          {
+            "protocol": "vmess",
+            "settings": {
+              "vnext": [
+                {
+                  "address": "54.229.151.97",
+                  "port": 59236,
+                  "users": [
+                    {
+                      "id": "2387bfbc-10a6-4bd7-dc55-7cba954ce6e8",
+                      "alterId": 0,
+                      "security": "auto"
+                    }
+                  ]
+                }
+              ]
+            },
+            "streamSettings": {
+              "network": "tcp",
+              "sockopt": {
+                "dialerProxy": "entry-hop"
+              }
+            },
+            "tag": "exit-hop"
+          },
+          {
+            "protocol": "vmess",
+            "settings": {
+              "vnext": [
+                {
+                  "address": "67.220.85.46",
+                  "port": 18000,
+                  "users": [
+                    {
+                      "id": "f8c8dc3d-0d37-46b0-8b34-a7232882fcfe",
+                      "alterId": 0,
+                      "security": "auto"
+                    }
+                  ]
+                }
+              ]
+            },
+            "streamSettings": {
+              "network": "tcp"
+            },
+            "tag": "entry-hop"
+          },
+          {
+            "protocol": "freedom",
+            "tag": "direct"
+          }
+        ],
+        "routing": {
+          "rules": [
+            {
+              "type": "field",
+              "outboundTag": "direct",
+              "ip": [
+                "geoip:private"
+              ]
+            }
+          ]
+        }
+      }
+    },
+    {
+      "name": "🇺🇸 -> 🇫🇷 51.77.217.70 Roubaix VL",
+      "config": {
+        "log": {
+          "loglevel": "warning"
+        },
+        "inbounds": [
+          {
+            "tag": "socks-in",
+            "listen": "127.0.0.1",
+            "port": 10808,
+            "protocol": "socks",
+            "settings": {
+              "auth": "noauth",
+              "udp": true
+            }
+          }
+        ],
+        "outbounds": [
+          {
+            "protocol": "vless",
+            "settings": {
+              "vnext": [
+                {
+                  "address": "51.77.217.70",
+                  "port": 2053,
+                  "users": [
+                    {
+                      "id": "bf16ee0c-8b3c-41e4-ab3a-8b48033c404e",
+                      "flow": ""
+                    }
+                  ]
+                }
+              ]
+            },
+            "streamSettings": {
+              "network": "tcp",
+              "security": "reality",
+              "realitySettings": {
+                "serverName": "www.apple.com",
+                "fingerprint": "random",
+                "publicKey": "g63cT3uI0Y5iUtj3m__RYz7nmR1eIK4AYikdnZCl63w"
+              },
+              "sockopt": {
+                "dialerProxy": "entry-hop"
+              }
+            },
+            "tag": "exit-hop"
+          },
+          {
+            "protocol": "vmess",
+            "settings": {
+              "vnext": [
+                {
+                  "address": "67.220.85.46",
+                  "port": 18000,
+                  "users": [
+                    {
+                      "id": "f8c8dc3d-0d37-46b0-8b34-a7232882fcfe",
+                      "alterId": 0,
+                      "security": "auto"
+                    }
+                  ]
+                }
+              ]
+            },
+            "streamSettings": {
+              "network": "tcp"
+            },
+            "tag": "entry-hop"
+          },
+          {
+            "protocol": "freedom",
+            "tag": "direct"
+          }
+        ],
+        "routing": {
+          "rules": [
+            {
+              "type": "field",
+              "outboundTag": "direct",
+              "ip": [
+                "geoip:private"
+              ]
+            }
+          ]
+        }
+      }
+    },
+    {
+      "name": "🇺🇸 -> 🇸🇪 46.29.255.123 Washington VL",
+      "config": {
+        "log": {
+          "loglevel": "warning"
+        },
+        "inbounds": [
+          {
+            "tag": "socks-in",
+            "listen": "127.0.0.1",
+            "port": 10808,
+            "protocol": "socks",
+            "settings": {
+              "auth": "noauth",
+              "udp": true
+            }
+          }
+        ],
+        "outbounds": [
+          {
+            "protocol": "vless",
+            "settings": {
+              "vnext": [
+                {
+                  "address": "46.29.255.123",
+                  "port": 59539,
+                  "users": [
+                    {
+                      "id": "30572b57-f5ab-4eb8-82d4-a24d399b99f6",
+                      "flow": "xtls-rprx-vision"
+                    }
+                  ]
+                }
+              ]
+            },
+            "streamSettings": {
+              "network": "tcp",
+              "security": "reality",
+              "realitySettings": {
+                "serverName": "cloudflare-dns.com",
+                "fingerprint": "firefox",
+                "publicKey": "R6mPqCsjZMWauci4LHw7Qp1LGKmBd-sxMXplyOn9bSQ"
+              },
+              "sockopt": {
+                "dialerProxy": "entry-hop"
+              }
+            },
+            "tag": "exit-hop"
+          },
+          {
+            "protocol": "vmess",
+            "settings": {
+              "vnext": [
+                {
+                  "address": "67.220.85.46",
+                  "port": 18000,
+                  "users": [
+                    {
+                      "id": "f8c8dc3d-0d37-46b0-8b34-a7232882fcfe",
+                      "alterId": 0,
+                      "security": "auto"
+                    }
+                  ]
+                }
+              ]
+            },
+            "streamSettings": {
+              "network": "tcp"
+            },
+            "tag": "entry-hop"
+          },
+          {
+            "protocol": "freedom",
+            "tag": "direct"
+          }
+        ],
+        "routing": {
+          "rules": [
+            {
+              "type": "field",
+              "outboundTag": "direct",
+              "ip": [
+                "geoip:private"
+              ]
+            }
+          ]
+        }
+      }
+    },
+    {
+      "name": "🇺🇸 -> 🇨🇴 149.104.107.41 Bogotá SS",
+      "config": {
+        "log": {
+          "loglevel": "warning"
+        },
+        "inbounds": [
+          {
+            "tag": "socks-in",
+            "listen": "127.0.0.1",
+            "port": 10808,
+            "protocol": "socks",
+            "settings": {
+              "auth": "noauth",
+              "udp": true
+            }
+          }
+        ],
+        "outbounds": [
+          {
+            "protocol": "shadowsocks",
+            "settings": {
+              "servers": [
+                {
+                  "address": "149.104.107.41",
+                  "port": 8090,
+                  "method": "aes-256-gcm",
+                  "password": "PCnnH6SQSnfoS27"
+                }
+              ]
+            },
+            "tag": "exit-hop",
+            "streamSettings": {
+              "sockopt": {
+                "dialerProxy": "entry-hop"
+              }
+            }
+          },
+          {
+            "protocol": "vmess",
+            "settings": {
+              "vnext": [
+                {
+                  "address": "67.220.85.46",
+                  "port": 18000,
+                  "users": [
+                    {
+                      "id": "f8c8dc3d-0d37-46b0-8b34-a7232882fcfe",
+                      "alterId": 0,
+                      "security": "auto"
+                    }
+                  ]
+                }
+              ]
+            },
+            "streamSettings": {
+              "network": "tcp"
+            },
+            "tag": "entry-hop"
+          },
+          {
+            "protocol": "freedom",
+            "tag": "direct"
+          }
+        ],
+        "routing": {
+          "rules": [
+            {
+              "type": "field",
+              "outboundTag": "direct",
+              "ip": [
+                "geoip:private"
+              ]
+            }
+          ]
+        }
+      }
+    },
+    {
+      "name": "🇺🇸 -> 🇺🇸 185.215.132.9 Atlanta SS",
+      "config": {
+        "log": {
+          "loglevel": "warning"
+        },
+        "inbounds": [
+          {
+            "tag": "socks-in",
+            "listen": "127.0.0.1",
+            "port": 10808,
+            "protocol": "socks",
+            "settings": {
+              "auth": "noauth",
+              "udp": true
+            }
+          }
+        ],
+        "outbounds": [
+          {
+            "protocol": "shadowsocks",
+            "settings": {
+              "servers": [
+                {
+                  "address": "185.215.132.9",
+                  "port": 19999,
+                  "method": "aes-256-gcm",
+                  "password": "ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4="
+                }
+              ]
+            },
+            "tag": "exit-hop",
+            "streamSettings": {
+              "sockopt": {
+                "dialerProxy": "entry-hop"
+              }
+            }
+          },
+          {
+            "protocol": "vmess",
+            "settings": {
+              "vnext": [
+                {
+                  "address": "67.220.85.46",
+                  "port": 18000,
+                  "users": [
+                    {
+                      "id": "f8c8dc3d-0d37-46b0-8b34-a7232882fcfe",
+                      "alterId": 0,
+                      "security": "auto"
+                    }
+                  ]
+                }
+              ]
+            },
+            "streamSettings": {
+              "network": "tcp"
+            },
+            "tag": "entry-hop"
+          },
+          {
+            "protocol": "freedom",
+            "tag": "direct"
+          }
+        ],
+        "routing": {
+          "rules": [
+            {
+              "type": "field",
+              "outboundTag": "direct",
+              "ip": [
+                "geoip:private"
+              ]
+            }
+          ]
+        }
+      }
+    },
+    {
+      "name": "🇺🇸 -> 🇲🇽 216.238.80.100 Querétaro City TR",
+      "config": {
+        "log": {
+          "loglevel": "warning"
+        },
+        "inbounds": [
+          {
+            "tag": "socks-in",
+            "listen": "127.0.0.1",
+            "port": 10808,
+            "protocol": "socks",
+            "settings": {
+              "auth": "noauth",
+              "udp": true
+            }
+          }
+        ],
+        "outbounds": [
+          {
+            "protocol": "trojan",
+            "settings": {
+              "servers": [
+                {
+                  "address": "216.238.80.100",
+                  "port": 443,
+                  "password": "0ab6c98dae3b48e8b9c4a776b6c9c19a"
+                }
+              ]
+            },
+            "streamSettings": {
+              "network": "tcp",
+              "security": "tls",
+              "tlsSettings": {
+                "serverName": "connectwithtopemployersandfindidealjobs.com",
+                "fingerprint": "chrome"
+              },
+              "sockopt": {
+                "dialerProxy": "entry-hop"
+              }
+            },
+            "tag": "exit-hop"
+          },
+          {
+            "protocol": "vmess",
+            "settings": {
+              "vnext": [
+                {
+                  "address": "67.220.85.46",
+                  "port": 18000,
+                  "users": [
+                    {
+                      "id": "f8c8dc3d-0d37-46b0-8b34-a7232882fcfe",
+                      "alterId": 0,
+                      "security": "auto"
+                    }
+                  ]
+                }
+              ]
+            },
+            "streamSettings": {
+              "network": "tcp"
+            },
+            "tag": "entry-hop"
+          },
+          {
+            "protocol": "freedom",
+            "tag": "direct"
+          }
+        ],
+        "routing": {
+          "rules": [
+            {
+              "type": "field",
+              "outboundTag": "direct",
+              "ip": [
+                "geoip:private"
+              ]
+            }
+          ]
+        }
+      }
+    },
+    {
+      "name": "🇺🇸 -> 🇬🇧 185.176.206.9 City of London SS",
+      "config": {
+        "log": {
+          "loglevel": "warning"
+        },
+        "inbounds": [
+          {
+            "tag": "socks-in",
+            "listen": "127.0.0.1",
+            "port": 10808,
+            "protocol": "socks",
+            "settings": {
+              "auth": "noauth",
+              "udp": true
+            }
+          }
+        ],
+        "outbounds": [
+          {
+            "protocol": "shadowsocks",
+            "settings": {
+              "servers": [
+                {
+                  "address": "185.176.206.9",
+                  "port": 19999,
+                  "method": "aes-256-gcm",
+                  "password": "ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4="
+                }
+              ]
+            },
+            "tag": "exit-hop",
+            "streamSettings": {
+              "sockopt": {
+                "dialerProxy": "entry-hop"
+              }
+            }
+          },
+          {
+            "protocol": "vmess",
+            "settings": {
+              "vnext": [
+                {
+                  "address": "67.220.85.46",
+                  "port": 18000,
+                  "users": [
+                    {
+                      "id": "f8c8dc3d-0d37-46b0-8b34-a7232882fcfe",
+                      "alterId": 0,
+                      "security": "auto"
+                    }
+                  ]
+                }
+              ]
+            },
+            "streamSettings": {
+              "network": "tcp"
+            },
+            "tag": "entry-hop"
+          },
+          {
+            "protocol": "freedom",
+            "tag": "direct"
+          }
+        ],
+        "routing": {
+          "rules": [
+            {
+              "type": "field",
+              "outboundTag": "direct",
+              "ip": [
+                "geoip:private"
+              ]
+            }
+          ]
+        }
+      }
+    },
+    {
+      "name": "🇺🇸 -> 🇩🇪 jdwabxe.cvewfjg.shop Unknown VL",
+      "config": {
+        "log": {
+          "loglevel": "warning"
+        },
+        "inbounds": [
+          {
+            "tag": "socks-in",
+            "listen": "127.0.0.1",
+            "port": 10808,
+            "protocol": "socks",
+            "settings": {
+              "auth": "noauth",
+              "udp": true
+            }
+          }
+        ],
+        "outbounds": [
+          {
+            "protocol": "vless",
+            "settings": {
+              "vnext": [
+                {
+                  "address": "jdwabxe.cvewfjg.shop",
+                  "port": 443,
+                  "users": [
+                    {
+                      "id": "711c018e-2692-4aa8-93f3-544d83fcd16c",
+                      "flow": "xtls-rprx-vision"
+                    }
+                  ]
+                }
+              ]
+            },
+            "streamSettings": {
+              "network": "raw",
+              "security": "reality",
+              "realitySettings": {
+                "serverName": "www.cloudflare.com",
+                "fingerprint": "chrome",
+                "publicKey": "HyVSZ2OyySwXT-xRhTAqoiuYflIaj_b0Jxm7S1Iq9hs"
+              },
+              "sockopt": {
+                "dialerProxy": "entry-hop"
+              }
+            },
+            "tag": "exit-hop"
+          },
+          {
+            "protocol": "vmess",
+            "settings": {
+              "vnext": [
+                {
+                  "address": "67.220.85.46",
+                  "port": 18000,
+                  "users": [
+                    {
+                      "id": "f8c8dc3d-0d37-46b0-8b34-a7232882fcfe",
+                      "alterId": 0,
+                      "security": "auto"
+                    }
+                  ]
+                }
+              ]
+            },
+            "streamSettings": {
+              "network": "tcp"
+            },
+            "tag": "entry-hop"
+          },
+          {
+            "protocol": "freedom",
+            "tag": "direct"
+          }
+        ],
+        "routing": {
+          "rules": [
+            {
+              "type": "field",
+              "outboundTag": "direct",
+              "ip": [
+                "geoip:private"
+              ]
+            }
+          ]
+        }
+      }
+    },
+    {
+      "name": "🇺🇸 -> 🇵🇱 70.34.252.255 Warsaw TR",
+      "config": {
+        "log": {
+          "loglevel": "warning"
+        },
+        "inbounds": [
+          {
+            "tag": "socks-in",
+            "listen": "127.0.0.1",
+            "port": 10808,
+            "protocol": "socks",
+            "settings": {
+              "auth": "noauth",
+              "udp": true
+            }
+          }
+        ],
+        "outbounds": [
+          {
+            "protocol": "trojan",
+            "settings": {
+              "servers": [
+                {
+                  "address": "70.34.252.255",
+                  "port": 443,
+                  "password": "0ab6c98dae3b48e8b9c4a776b6c9c19a"
+                }
+              ]
+            },
+            "streamSettings": {
+              "network": "tcp",
+              "security": "tls",
+              "tlsSettings": {
+                "serverName": "browseexecutivejobopeningsandenhanceleadershipcareer.com",
+                "fingerprint": "chrome"
+              },
+              "sockopt": {
+                "dialerProxy": "entry-hop"
+              }
+            },
+            "tag": "exit-hop"
+          },
+          {
+            "protocol": "vmess",
+            "settings": {
+              "vnext": [
+                {
+                  "address": "67.220.85.46",
+                  "port": 18000,
+                  "users": [
+                    {
+                      "id": "f8c8dc3d-0d37-46b0-8b34-a7232882fcfe",
+                      "alterId": 0,
+                      "security": "auto"
+                    }
+                  ]
+                }
+              ]
+            },
+            "streamSettings": {
+              "network": "tcp"
+            },
+            "tag": "entry-hop"
+          },
+          {
+            "protocol": "freedom",
+            "tag": "direct"
+          }
+        ],
+        "routing": {
+          "rules": [
+            {
+              "type": "field",
+              "outboundTag": "direct",
+              "ip": [
+                "geoip:private"
+              ]
+            }
+          ]
+        }
+      }
+    },
+    {
+      "name": "🇺🇸 -> 🇨🇱 64.176.7.205 Santiago TR",
+      "config": {
+        "log": {
+          "loglevel": "warning"
+        },
+        "inbounds": [
+          {
+            "tag": "socks-in",
+            "listen": "127.0.0.1",
+            "port": 10808,
+            "protocol": "socks",
+            "settings": {
+              "auth": "noauth",
+              "udp": true
+            }
+          }
+        ],
+        "outbounds": [
+          {
+            "protocol": "trojan",
+            "settings": {
+              "servers": [
+                {
+                  "address": "64.176.7.205",
+                  "port": 443,
+                  "password": "0ab6c98dae3b48e8b9c4a776b6c9c19a"
+                }
+              ]
+            },
+            "streamSettings": {
+              "network": "tcp",
+              "security": "tls",
+              "tlsSettings": {
+                "serverName": "advanceyouremploymentskillsandcareerdevelopmenthub.com",
+                "fingerprint": "chrome"
+              },
+              "sockopt": {
+                "dialerProxy": "entry-hop"
+              }
+            },
+            "tag": "exit-hop"
+          },
+          {
+            "protocol": "vmess",
+            "settings": {
+              "vnext": [
+                {
+                  "address": "67.220.85.46",
+                  "port": 18000,
+                  "users": [
+                    {
+                      "id": "f8c8dc3d-0d37-46b0-8b34-a7232882fcfe",
+                      "alterId": 0,
+                      "security": "auto"
+                    }
+                  ]
+                }
+              ]
+            },
+            "streamSettings": {
+              "network": "tcp"
+            },
+            "tag": "entry-hop"
+          },
+          {
+            "protocol": "freedom",
+            "tag": "direct"
+          }
+        ],
+        "routing": {
+          "rules": [
+            {
+              "type": "field",
+              "outboundTag": "direct",
+              "ip": [
+                "geoip:private"
+              ]
+            }
+          ]
+        }
+      }
+    },
+    {
+      "name": "🇺🇸 -> 🇳🇱 193.29.139.223 Amsterdam SS",
+      "config": {
+        "log": {
+          "loglevel": "warning"
+        },
+        "inbounds": [
+          {
+            "tag": "socks-in",
+            "listen": "127.0.0.1",
+            "port": 10808,
+            "protocol": "socks",
+            "settings": {
+              "auth": "noauth",
+              "udp": true
+            }
+          }
+        ],
+        "outbounds": [
+          {
+            "protocol": "shadowsocks",
+            "settings": {
+              "servers": [
+                {
+                  "address": "193.29.139.223",
+                  "port": 8080,
+                  "method": "chacha20-ietf-poly1305",
+                  "password": "k1dBOmOB4oqi7Ump37a1bQ"
+                }
+              ]
+            },
+            "tag": "exit-hop",
+            "streamSettings": {
+              "sockopt": {
+                "dialerProxy": "entry-hop"
+              }
+            }
+          },
+          {
+            "protocol": "vmess",
+            "settings": {
+              "vnext": [
+                {
+                  "address": "67.220.85.46",
+                  "port": 18000,
+                  "users": [
+                    {
+                      "id": "f8c8dc3d-0d37-46b0-8b34-a7232882fcfe",
+                      "alterId": 0,
+                      "security": "auto"
+                    }
+                  ]
+                }
+              ]
+            },
+            "streamSettings": {
+              "network": "tcp"
+            },
+            "tag": "entry-hop"
+          },
+          {
+            "protocol": "freedom",
+            "tag": "direct"
+          }
+        ],
+        "routing": {
+          "rules": [
+            {
+              "type": "field",
+              "outboundTag": "direct",
+              "ip": [
+                "geoip:private"
+              ]
+            }
+          ]
+        }
+      }
+    },
+    {
+      "name": "🇺🇸 -> 🇦🇹 82.110.60.9 London SS",
+      "config": {
+        "log": {
+          "loglevel": "warning"
+        },
+        "inbounds": [
+          {
+            "tag": "socks-in",
+            "listen": "127.0.0.1",
+            "port": 10808,
+            "protocol": "socks",
+            "settings": {
+              "auth": "noauth",
+              "udp": true
+            }
+          }
+        ],
+        "outbounds": [
+          {
+            "protocol": "shadowsocks",
+            "settings": {
+              "servers": [
+                {
+                  "address": "82.110.60.9",
+                  "port": 19999,
+                  "method": "aes-256-gcm",
+                  "password": "ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4="
+                }
+              ]
+            },
+            "tag": "exit-hop",
+            "streamSettings": {
+              "sockopt": {
+                "dialerProxy": "entry-hop"
+              }
+            }
+          },
+          {
+            "protocol": "vmess",
+            "settings": {
+              "vnext": [
+                {
+                  "address": "67.220.85.46",
+                  "port": 18000,
+                  "users": [
+                    {
+                      "id": "f8c8dc3d-0d37-46b0-8b34-a7232882fcfe",
+                      "alterId": 0,
+                      "security": "auto"
+                    }
+                  ]
+                }
+              ]
+            },
+            "streamSettings": {
+              "network": "tcp"
+            },
+            "tag": "entry-hop"
+          },
+          {
+            "protocol": "freedom",
+            "tag": "direct"
+          }
+        ],
+        "routing": {
+          "rules": [
+            {
+              "type": "field",
+              "outboundTag": "direct",
+              "ip": [
+                "geoip:private"
+              ]
+            }
+          ]
+        }
+      }
+    },
+    {
+      "name": "🇺🇸 -> 🇮🇹 185.164.175.81 Milan SS",
+      "config": {
+        "log": {
+          "loglevel": "warning"
+        },
+        "inbounds": [
+          {
+            "tag": "socks-in",
+            "listen": "127.0.0.1",
+            "port": 10808,
+            "protocol": "socks",
+            "settings": {
+              "auth": "noauth",
+              "udp": true
+            }
+          }
+        ],
+        "outbounds": [
+          {
+            "protocol": "shadowsocks",
+            "settings": {
+              "servers": [
+                {
+                  "address": "185.164.175.81",
+                  "port": 19999,
+                  "method": "aes-256-gcm",
+                  "password": "ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4="
+                }
+              ]
+            },
+            "tag": "exit-hop",
+            "streamSettings": {
+              "sockopt": {
+                "dialerProxy": "entry-hop"
+              }
+            }
+          },
+          {
+            "protocol": "vmess",
+            "settings": {
+              "vnext": [
+                {
+                  "address": "67.220.85.46",
+                  "port": 18000,
+                  "users": [
+                    {
+                      "id": "f8c8dc3d-0d37-46b0-8b34-a7232882fcfe",
+                      "alterId": 0,
+                      "security": "auto"
+                    }
+                  ]
+                }
+              ]
+            },
+            "streamSettings": {
+              "network": "tcp"
+            },
+            "tag": "entry-hop"
+          },
+          {
+            "protocol": "freedom",
+            "tag": "direct"
+          }
+        ],
+        "routing": {
+          "rules": [
+            {
+              "type": "field",
+              "outboundTag": "direct",
+              "ip": [
+                "geoip:private"
+              ]
+            }
+          ]
+        }
+      }
+    },
+    {
+      "name": "🇺🇸 -> 🇪🇸 66.163.118.166 Madrid TR",
+      "config": {
+        "log": {
+          "loglevel": "warning"
+        },
+        "inbounds": [
+          {
+            "tag": "socks-in",
+            "listen": "127.0.0.1",
+            "port": 10808,
+            "protocol": "socks",
+            "settings": {
+              "auth": "noauth",
+              "udp": true
+            }
+          }
+        ],
+        "outbounds": [
+          {
+            "protocol": "trojan",
+            "settings": {
+              "servers": [
+                {
+                  "address": "66.163.118.166",
+                  "port": 443,
+                  "password": "0ab6c98dae3b48e8b9c4a776b6c9c19a"
+                }
+              ]
+            },
+            "streamSettings": {
+              "network": "tcp",
+              "security": "tls",
+              "tlsSettings": {
+                "serverName": "learn.discovergreatjobsandadvanceyourcareer.com",
+                "fingerprint": "chrome"
+              },
+              "sockopt": {
+                "dialerProxy": "entry-hop"
+              }
+            },
+            "tag": "exit-hop"
+          },
+          {
+            "protocol": "vmess",
+            "settings": {
+              "vnext": [
+                {
+                  "address": "67.220.85.46",
+                  "port": 18000,
+                  "users": [
+                    {
+                      "id": "f8c8dc3d-0d37-46b0-8b34-a7232882fcfe",
+                      "alterId": 0,
+                      "security": "auto"
+                    }
+                  ]
+                }
+              ]
+            },
+            "streamSettings": {
+              "network": "tcp"
+            },
+            "tag": "entry-hop"
+          },
+          {
+            "protocol": "freedom",
+            "tag": "direct"
+          }
+        ],
+        "routing": {
+          "rules": [
+            {
+              "type": "field",
+              "outboundTag": "direct",
+              "ip": [
+                "geoip:private"
+              ]
+            }
+          ]
+        }
+      }
+    },
+    {
+      "name": "🇺🇸 -> 🇨🇿 195.123.245.241 Prague VL",
+      "config": {
+        "log": {
+          "loglevel": "warning"
+        },
+        "inbounds": [
+          {
+            "tag": "socks-in",
+            "listen": "127.0.0.1",
+            "port": 10808,
+            "protocol": "socks",
+            "settings": {
+              "auth": "noauth",
+              "udp": true
+            }
+          }
+        ],
+        "outbounds": [
+          {
+            "protocol": "vless",
+            "settings": {
+              "vnext": [
+                {
+                  "address": "195.123.245.241",
+                  "port": 443,
+                  "users": [
+                    {
+                      "id": "7c053ca8-38cc-45e2-930c-eda1fd66f903",
+                      "flow": "xtls-rprx-vision"
+                    }
+                  ]
+                }
+              ]
+            },
+            "streamSettings": {
+              "network": "tcp",
+              "security": "reality",
+              "realitySettings": {
+                "serverName": "gateway.icloud.com",
+                "fingerprint": "chrome",
+                "publicKey": "hlY5ce1UsVIgE46y5PlEZhUsSaXUnCtoDLLaGrhInjw"
+              },
+              "sockopt": {
+                "dialerProxy": "entry-hop"
+              }
+            },
+            "tag": "exit-hop"
+          },
+          {
+            "protocol": "vmess",
+            "settings": {
+              "vnext": [
+                {
+                  "address": "67.220.85.46",
+                  "port": 18000,
+                  "users": [
+                    {
+                      "id": "f8c8dc3d-0d37-46b0-8b34-a7232882fcfe",
+                      "alterId": 0,
+                      "security": "auto"
+                    }
+                  ]
+                }
+              ]
+            },
+            "streamSettings": {
+              "network": "tcp"
+            },
+            "tag": "entry-hop"
+          },
+          {
+            "protocol": "freedom",
+            "tag": "direct"
+          }
+        ],
+        "routing": {
+          "rules": [
+            {
+              "type": "field",
+              "outboundTag": "direct",
+              "ip": [
+                "geoip:private"
+              ]
+            }
+          ]
+        }
+      }
+    },
+    {
+      "name": "🇺🇸 -> 🇯🇵 103.75.118.228 Tokyo VL",
+      "config": {
+        "log": {
+          "loglevel": "warning"
+        },
+        "inbounds": [
+          {
+            "tag": "socks-in",
+            "listen": "127.0.0.1",
+            "port": 10808,
+            "protocol": "socks",
+            "settings": {
+              "auth": "noauth",
+              "udp": true
+            }
+          }
+        ],
+        "outbounds": [
+          {
+            "protocol": "vless",
+            "settings": {
+              "vnext": [
+                {
+                  "address": "103.75.118.228",
+                  "port": 11452,
+                  "users": [
+                    {
+                      "id": "814bd064-544d-4255-a070-5705c03f6da9",
+                      "flow": "xtls-rprx-vision"
+                    }
+                  ]
+                }
+              ]
+            },
+            "streamSettings": {
+              "network": "tcp",
+              "security": "reality",
+              "realitySettings": {
+                "serverName": "www.apple.com",
+                "fingerprint": "chrome",
+                "publicKey": "k2hPp0tTW0Da-HK94wYpSCLbuK44LfGqC2MSJIM1Ti0"
+              },
+              "sockopt": {
+                "dialerProxy": "entry-hop"
+              }
+            },
+            "tag": "exit-hop"
+          },
+          {
+            "protocol": "vmess",
+            "settings": {
+              "vnext": [
+                {
+                  "address": "67.220.85.46",
+                  "port": 18000,
+                  "users": [
+                    {
+                      "id": "f8c8dc3d-0d37-46b0-8b34-a7232882fcfe",
+                      "alterId": 0,
+                      "security": "auto"
+                    }
+                  ]
+                }
+              ]
+            },
+            "streamSettings": {
+              "network": "tcp"
+            },
+            "tag": "entry-hop"
+          },
+          {
+            "protocol": "freedom",
+            "tag": "direct"
+          }
+        ],
+        "routing": {
+          "rules": [
+            {
+              "type": "field",
+              "outboundTag": "direct",
+              "ip": [
+                "geoip:private"
+              ]
+            }
+          ]
+        }
+      }
+    },
+    {
+      "name": "🇺🇸 -> 🇫🇮 95.216.27.15 Helsinki VL",
+      "config": {
+        "log": {
+          "loglevel": "warning"
+        },
+        "inbounds": [
+          {
+            "tag": "socks-in",
+            "listen": "127.0.0.1",
+            "port": 10808,
+            "protocol": "socks",
+            "settings": {
+              "auth": "noauth",
+              "udp": true
+            }
+          }
+        ],
+        "outbounds": [
+          {
+            "protocol": "vless",
+            "settings": {
+              "vnext": [
+                {
+                  "address": "95.216.27.15",
+                  "port": 2053,
+                  "users": [
+                    {
+                      "id": "b79d736d-0f10-4169-b626-362059d18204",
+                      "flow": ""
+                    }
+                  ]
+                }
+              ]
+            },
+            "streamSettings": {
+              "network": "tcp",
+              "security": "reality",
+              "realitySettings": {
+                "serverName": "www.cloudflare.com",
+                "fingerprint": "chrome",
+                "publicKey": "aiHdxKOzcFZDILKj3MIPrMsyT0XxMy_O6xoxnz6MIWs"
+              },
+              "sockopt": {
+                "dialerProxy": "entry-hop"
+              }
+            },
+            "tag": "exit-hop"
+          },
+          {
+            "protocol": "vmess",
+            "settings": {
+              "vnext": [
+                {
+                  "address": "67.220.85.46",
+                  "port": 18000,
+                  "users": [
+                    {
+                      "id": "f8c8dc3d-0d37-46b0-8b34-a7232882fcfe",
+                      "alterId": 0,
+                      "security": "auto"
+                    }
+                  ]
+                }
+              ]
+            },
+            "streamSettings": {
+              "network": "tcp"
+            },
+            "tag": "entry-hop"
+          },
+          {
+            "protocol": "freedom",
+            "tag": "direct"
+          }
+        ],
+        "routing": {
+          "rules": [
+            {
+              "type": "field",
+              "outboundTag": "direct",
+              "ip": [
+                "geoip:private"
+              ]
+            }
+          ]
+        }
+      }
+    },
+    {
+      "name": "🇺🇸 -> 🇨🇭 107.189.7.176 Roost VL",
+      "config": {
+        "log": {
+          "loglevel": "warning"
+        },
+        "inbounds": [
+          {
+            "tag": "socks-in",
+            "listen": "127.0.0.1",
+            "port": 10808,
+            "protocol": "socks",
+            "settings": {
+              "auth": "noauth",
+              "udp": true
+            }
+          }
+        ],
+        "outbounds": [
+          {
+            "protocol": "vless",
+            "settings": {
+              "vnext": [
+                {
+                  "address": "107.189.7.176",
+                  "port": 32752,
+                  "users": [
+                    {
+                      "id": "4970c1cd-13e1-498a-920a-61d07be2fa65",
+                      "flow": ""
+                    }
+                  ]
+                }
+              ]
+            },
+            "streamSettings": {
+              "network": "tcp",
+              "security": "reality",
+              "realitySettings": {
+                "serverName": "www.apple.com",
+                "fingerprint": "chrome",
+                "publicKey": "pfFcQxKv4EPhCDUoZMCmTjj4FK7HHQg_me-In3bOejA"
+              },
+              "sockopt": {
+                "dialerProxy": "entry-hop"
+              }
+            },
+            "tag": "exit-hop"
+          },
+          {
+            "protocol": "vmess",
+            "settings": {
+              "vnext": [
+                {
+                  "address": "67.220.85.46",
+                  "port": 18000,
+                  "users": [
+                    {
+                      "id": "f8c8dc3d-0d37-46b0-8b34-a7232882fcfe",
+                      "alterId": 0,
+                      "security": "auto"
+                    }
+                  ]
+                }
+              ]
+            },
+            "streamSettings": {
+              "network": "tcp"
+            },
+            "tag": "entry-hop"
+          },
+          {
+            "protocol": "freedom",
+            "tag": "direct"
+          }
+        ],
+        "routing": {
+          "rules": [
+            {
+              "type": "field",
+              "outboundTag": "direct",
+              "ip": [
+                "geoip:private"
+              ]
+            }
+          ]
+        }
+      }
+    },
+    {
+      "name": "🇺🇸 -> 🇮🇪 54.229.151.97 Dublin VM",
+      "config": {
+        "log": {
+          "loglevel": "warning"
+        },
+        "inbounds": [
+          {
+            "tag": "socks-in",
+            "listen": "127.0.0.1",
+            "port": 10808,
+            "protocol": "socks",
+            "settings": {
+              "auth": "noauth",
+              "udp": true
+            }
+          }
+        ],
+        "outbounds": [
+          {
+            "protocol": "vmess",
+            "settings": {
+              "vnext": [
+                {
+                  "address": "54.229.151.97",
+                  "port": 59236,
+                  "users": [
+                    {
+                      "id": "2387bfbc-10a6-4bd7-dc55-7cba954ce6e8",
+                      "alterId": 0,
+                      "security": "auto"
+                    }
+                  ]
+                }
+              ]
+            },
+            "streamSettings": {
+              "network": "tcp",
+              "sockopt": {
+                "dialerProxy": "entry-hop"
+              }
+            },
+            "tag": "exit-hop"
+          },
+          {
+            "protocol": "vmess",
+            "settings": {
+              "vnext": [
+                {
+                  "address": "67.220.85.46",
+                  "port": 18000,
+                  "users": [
+                    {
+                      "id": "f8c8dc3d-0d37-46b0-8b34-a7232882fcfe",
+                      "alterId": 0,
+                      "security": "auto"
+                    }
+                  ]
+                }
+              ]
+            },
+            "streamSettings": {
+              "network": "tcp"
+            },
+            "tag": "entry-hop"
+          },
+          {
+            "protocol": "freedom",
+            "tag": "direct"
+          }
+        ],
+        "routing": {
+          "rules": [
+            {
+              "type": "field",
+              "outboundTag": "direct",
+              "ip": [
+                "geoip:private"
+              ]
+            }
+          ]
+        }
+      }
+    },
+    {
+      "name": "🇺🇸 -> 🇫🇷 51.77.217.70 Roubaix VL",
+      "config": {
+        "log": {
+          "loglevel": "warning"
+        },
+        "inbounds": [
+          {
+            "tag": "socks-in",
+            "listen": "127.0.0.1",
+            "port": 10808,
+            "protocol": "socks",
+            "settings": {
+              "auth": "noauth",
+              "udp": true
+            }
+          }
+        ],
+        "outbounds": [
+          {
+            "protocol": "vless",
+            "settings": {
+              "vnext": [
+                {
+                  "address": "51.77.217.70",
+                  "port": 2053,
+                  "users": [
+                    {
+                      "id": "bf16ee0c-8b3c-41e4-ab3a-8b48033c404e",
+                      "flow": ""
+                    }
+                  ]
+                }
+              ]
+            },
+            "streamSettings": {
+              "network": "tcp",
+              "security": "reality",
+              "realitySettings": {
+                "serverName": "www.apple.com",
+                "fingerprint": "random",
+                "publicKey": "g63cT3uI0Y5iUtj3m__RYz7nmR1eIK4AYikdnZCl63w"
+              },
+              "sockopt": {
+                "dialerProxy": "entry-hop"
+              }
+            },
+            "tag": "exit-hop"
+          },
+          {
+            "protocol": "vmess",
+            "settings": {
+              "vnext": [
+                {
+                  "address": "67.220.85.46",
+                  "port": 18000,
+                  "users": [
+                    {
+                      "id": "f8c8dc3d-0d37-46b0-8b34-a7232882fcfe",
+                      "alterId": 0,
+                      "security": "auto"
+                    }
+                  ]
+                }
+              ]
+            },
+            "streamSettings": {
+              "network": "tcp"
+            },
+            "tag": "entry-hop"
+          },
+          {
+            "protocol": "freedom",
+            "tag": "direct"
+          }
+        ],
+        "routing": {
+          "rules": [
+            {
+              "type": "field",
+              "outboundTag": "direct",
+              "ip": [
+                "geoip:private"
+              ]
+            }
+          ]
+        }
+      }
+    },
+    {
+      "name": "🇺🇸 -> 🇸🇪 46.29.255.123 Washington VL",
+      "config": {
+        "log": {
+          "loglevel": "warning"
+        },
+        "inbounds": [
+          {
+            "tag": "socks-in",
+            "listen": "127.0.0.1",
+            "port": 10808,
+            "protocol": "socks",
+            "settings": {
+              "auth": "noauth",
+              "udp": true
+            }
+          }
+        ],
+        "outbounds": [
+          {
+            "protocol": "vless",
+            "settings": {
+              "vnext": [
+                {
+                  "address": "46.29.255.123",
+                  "port": 59539,
+                  "users": [
+                    {
+                      "id": "30572b57-f5ab-4eb8-82d4-a24d399b99f6",
+                      "flow": "xtls-rprx-vision"
+                    }
+                  ]
+                }
+              ]
+            },
+            "streamSettings": {
+              "network": "tcp",
+              "security": "reality",
+              "realitySettings": {
+                "serverName": "cloudflare-dns.com",
+                "fingerprint": "firefox",
+                "publicKey": "R6mPqCsjZMWauci4LHw7Qp1LGKmBd-sxMXplyOn9bSQ"
+              },
+              "sockopt": {
+                "dialerProxy": "entry-hop"
+              }
+            },
+            "tag": "exit-hop"
+          },
+          {
+            "protocol": "vmess",
+            "settings": {
+              "vnext": [
+                {
+                  "address": "67.220.85.46",
+                  "port": 18000,
+                  "users": [
+                    {
+                      "id": "f8c8dc3d-0d37-46b0-8b34-a7232882fcfe",
+                      "alterId": 0,
+                      "security": "auto"
+                    }
+                  ]
+                }
+              ]
+            },
+            "streamSettings": {
+              "network": "tcp"
+            },
+            "tag": "entry-hop"
+          },
+          {
+            "protocol": "freedom",
+            "tag": "direct"
+          }
+        ],
+        "routing": {
+          "rules": [
+            {
+              "type": "field",
+              "outboundTag": "direct",
+              "ip": [
+                "geoip:private"
+              ]
+            }
+          ]
+        }
+      }
+    },
+    {
+      "name": "🇺🇸 -> 🇨🇴 149.104.107.41 Bogotá SS",
+      "config": {
+        "log": {
+          "loglevel": "warning"
+        },
+        "inbounds": [
+          {
+            "tag": "socks-in",
+            "listen": "127.0.0.1",
+            "port": 10808,
+            "protocol": "socks",
+            "settings": {
+              "auth": "noauth",
+              "udp": true
+            }
+          }
+        ],
+        "outbounds": [
+          {
+            "protocol": "shadowsocks",
+            "settings": {
+              "servers": [
+                {
+                  "address": "149.104.107.41",
+                  "port": 8090,
+                  "method": "aes-256-gcm",
+                  "password": "PCnnH6SQSnfoS27"
+                }
+              ]
+            },
+            "tag": "exit-hop",
+            "streamSettings": {
+              "sockopt": {
+                "dialerProxy": "entry-hop"
+              }
+            }
+          },
+          {
+            "protocol": "vmess",
+            "settings": {
+              "vnext": [
+                {
+                  "address": "67.220.85.46",
+                  "port": 18000,
+                  "users": [
+                    {
+                      "id": "f8c8dc3d-0d37-46b0-8b34-a7232882fcfe",
+                      "alterId": 0,
+                      "security": "auto"
+                    }
+                  ]
+                }
+              ]
+            },
+            "streamSettings": {
+              "network": "tcp"
+            },
+            "tag": "entry-hop"
+          },
+          {
+            "protocol": "freedom",
+            "tag": "direct"
+          }
+        ],
+        "routing": {
+          "rules": [
+            {
+              "type": "field",
+              "outboundTag": "direct",
+              "ip": [
+                "geoip:private"
+              ]
+            }
+          ]
+        }
+      }
+    }
+  ]
+}
