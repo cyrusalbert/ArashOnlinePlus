@@ -93,12 +93,13 @@ def parse_link(link):
         return {"cfg": out, "proto": scheme, "server": u.hostname, "remark": remark}
 
     # --- shadowsocks ---
-    if scheme == "ss":
+        if scheme == "ss":
         body = link.split("://", 1)[1]
         # plugin part
         plugin = ""
         if "?" in body:
-            body, q = body.split(" = re.search(r"plugin=([^&]+)", q)
+            body, query = body.split("?", 1)
+            m = re.search(r"plugin=([^&]+)", query)
             if m:
                 plugin = unquote(m.group(1))
         raw = unquote(body)
