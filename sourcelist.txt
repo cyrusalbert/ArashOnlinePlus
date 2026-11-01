@@ -1,0 +1,6 @@
+# One subscription URL per line. Lines starting with # are ignored.
+# Single configs (vmess:// vless:// trojan:// ss:// hysteria2://) are accepted too.
+#
+# https://example.com/sub/your-token
+# https://raw.githubusercontent.com/USER/REPO/main/configs.txt
+# vless://uuid@host:443?security=tls&type=ws&path=%2F#my-config
