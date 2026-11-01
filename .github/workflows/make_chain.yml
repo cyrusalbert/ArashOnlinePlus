@@ -22,24 +22,17 @@ jobs:
     env:
       XRAY_VERSION: ${{ vars.XRAY_VERSION || 'latest' }}
     steps:
-      - uses: actions/checkout@v4
-
-      - uses: actions/setup-go@v5
+      - uses: actions/checkout@v6
         with:
-          go-version: stable
-          cache: false
+          ref: main
+
+      - uses: actions/setup-python@v6
+        with:
+          python-version: "3.12"
 
       - name: Install Xray-core
         run: bash scripts/install-xray.sh ./xray
-
-      - name: Build
-        run: go build -trimpath -o arashonline-bin .
-
-      - name: Test, filter and rank configs
-        run: ./arashonline-bin -xray ./xray/xray
-        env:
-          # Optional: private subscription URLs (one per line) kept out of the repository.
-          EXTRA_SOURCES: ${{ secrets.EXTRA_SOURCES }}
+        
 
       # Entry x exit chains (needs entrylist.txt). A failure here must not block publishing the lists.
       - name: Build chained configs
@@ -50,7 +43,7 @@ jobs:
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          for f in arashonline*.txt arashonline-chain.json; do
+          for f in arashonline-chain.json; do
             if [ -f "$f" ]; then git add "$f"; fi
           done
           if git diff --cached --quiet; then
