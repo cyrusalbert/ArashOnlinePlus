@@ -5,3 +5,7 @@
 # https://raw.githubusercontent.com/USER/REPO/main/configs.txt
 # vless://uuid@host:443?security=tls&type=ws&path=%2F#my-config
 https://raw.githubusercontent.com/4n0nymou3/multi-proxy-config-fetcher/refs/heads/main/configs/proxy_configs_tested.txt
+https://raw.githubusercontent.com/0xRadikal/Free-v2ray-Configs/main/verified/configs.txt
+https://raw.githubusercontent.com/iampedii/whitedns-sub/refs/heads/main/base64.txt
+https://github.com/Delta-Kronecker/V2ray-Config/raw/refs/heads/main/config/all_configs.txt
+https://raw.githubusercontent.com/itsyebekhe/PSG/main/subscriptions/xray/mix
