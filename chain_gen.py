@@ -5,7 +5,7 @@ import urllib.request
 from urllib.parse import urlparse, parse_qs, unquote
 
 ENTRY_FILE = "entrylist.txt"
-EXIT_FILE = "ar"
+EXIT_FILE = "arashonline-BestLoc.txt"
 OUTPUT_FILE = "arashonline-chain.json"
 
 # ---------- helpers ----------
@@ -15,7 +15,6 @@ def read_lines(path):
         return [l.strip() for l in f if l.strip()]
 
 def get_flag(remark):
-    """Extract flag emoji from remark, or fall back to '?'."""
     if remark:
         flags = re.findall(r"[\U0001F1E6-\U0001F1FF]{2}", remark)
         if flags:
@@ -30,7 +29,6 @@ def b64_decode(s):
 # ---------- parsers ----------
 
 def parse_link(link):
-    """ config dict with stream settings."""
     link = link.strip()
     remark = ""
     if "#" in link:
@@ -81,8 +79,13 @@ def parse_link(link):
             "streamSettings": {"network": q.get("type", ["tcp"])[0],
                                "security": q.get("security", ["none"])[0]},
         }
-        if q.get("security", ["none"])[0] in ("tls", "reality"):
-            out["streamSettings"]["tlsSettings" if out["streamSettings"]["security"] == "tls" else "realitySettings"] = {
+        if out["streamSettings"]["security"] == "tls":
+            out["streamSettings"]["tlsSettings"] = {
+                "serverName": q.get("sni", [u.hostname])[0],
+                "fingerprint": q.get("fp", ["chrome"])[0],
+            }
+        elif out["streamSettings"]["security"] == "reality":
+            out["streamSettings"]["realitySettings"] = {
                 "serverName": q.get("sni", [u.hostname])[0],
                 "fingerprint": q.get("fp", ["chrome"])[0],
             }
@@ -93,9 +96,8 @@ def parse_link(link):
         return {"cfg": out, "proto": scheme, "server": u.hostname, "remark": remark}
 
     # --- shadowsocks ---
-        if scheme == "ss":
+    if scheme == "ss":
         body = link.split("://", 1)[1]
-        # plugin part
         plugin = ""
         if "?" in body:
             body, query = body.split("?", 1)
@@ -103,26 +105,25 @@ def parse_link(link):
             if m:
                 plugin = unquote(m.group(1))
         raw = unquote(body)
-        if "@" not in raw:  # fully base64 encoded
+        if "@" not in raw:
             raw = b64_decode(body)
         userinfo, hostport = raw.rsplit("@", 1)
-        if ":" not in userinfo:  # base64 method:pass
+        if ":" not in userinfo:
             userinfo = b64_decode(userinfo)
         method, password = userinfo.split(":", 1)
-        host, port = hostport.r:", 1)
+        host, port = hostport.rsplit(":", 1)
         out = {
             "protocol": "shadowsocks",
-            [{
+            "settings": {"servers": [{
                 "address": host, "port": int(port),
                 "method": method, "password": password
             }]},
         }
         if plugin:
-"]["servers"][0]["plugin"] = plugin.split(";", 1)[0]
+            out["settings"]["servers"][0]["plugin"] = plugin.split(";", 1)[0]
         return {"cfg": out, "proto": "shadowsocks", "server": host, "remark": remark}
 
     return None
-
 
 def parse_file(path):
     parsed = []
@@ -138,7 +139,6 @@ def parse_file(path):
 # ---------- geo lookup ----------
 
 def geo_lookup(ips):
-    """Look up country + city for a list of IPs via ip-api (batch, free)."""
     result = {}
     try:
         req = urllib.request.Request(
@@ -149,10 +149,9 @@ def geo_lookup(ips):
             for row in json.loads(r.read()):
                 result[row["query"]] = (row.get("countryCode", "??"),
                                         row.get("city", "Unknown"))
-    except Exception:
-        pass
+    except Exception as ex:
+        print(f"Geo lookup failed: {ex}")
     return result
-
 
 def ip_of(cfg):
     s = cfg["cfg"]["settings"]
@@ -163,12 +162,11 @@ def ip_of(cfg):
 
 def build_chain(entry, exit_):
     entry_out = entry["cfg"]
-    exit_out = json.loads(json.dumps(exit_["cfg"]))  # deep copy
+    exit_out = json.loads(json.dumps(exit_["cfg"]))
 
     entry_out["tag"] = "entry-hop"
     exit_out["tag"] = "exit-hop"
-    # route exit traffic through the entry hop (Xray dialerProxy chaining)
-    exit_out.setdefault("streamSettings", {})erProxy": "entry-hop"}
+    exit_out.setdefault("streamSettings", {})["sockopt"] = {"dialerProxy": "entry-hop"}
 
     conf = {
         "log": {"loglevel": "warning"},
@@ -194,8 +192,13 @@ def main():
     exits = parse_file(EXIT_FILE)
     print(f"Parsed {len(entries)} entry / {len(exits)} exit configs")
 
-    # geo info for exits (only IPs that look like addresses)
     geo = geo_lookup(list({ip_of(e) for e in exits}))
+
+    flag_map = {"US": "🇺🇸", "DE": "🇩🇪", "NL": "🇳🇱", "GB": "🇬🇧",
+                "FR": "🇫🇷", "TR": "🇹🇷", "AE": "🇦🇪", "SE": "🇸🇪",
+                "FI": "🇫🇮", "CA": "🇨🇦", "JP": "🇯🇵", "SG": "🇸🇬"}
+    proto_map = {"vmess": "VM", "vless": "VL", "trojan": "TR",
+                 "shadowsocks": "SS"}
 
     results = []
     for e in entries:
@@ -205,19 +208,17 @@ def main():
             ip = ip_of(x)
             cc, city = geo.get(ip, ("??", "Unknown"))
             if x_flag == "🏳":
-                x_flag = {"US": "🇺🇸", "DE": "🇩🇪", "NL": "🇳🇱", "GB": "🇬🇧",
-                          "FR": "🇫🇷", "TR": "🇹🇷", "AE": "🇦🇪", "SE": "🇸🇪",
-                          "FI": "🇫🇮", "CA": "🇨🇦", "JP": "🇯🇵", "SG": "🇸🇬"}.get(cc, "🏳")
-            proto = {"vmess": "VM", "vless": "VL", "trojan": "TR",
-                     "shadowsocks": "SS"}[x["proto"]]
+                x_flag = flag_map.get(cc, "🏳")
+            proto = proto_map[x["proto"]]
             name = f"{e_flag} -> {x_flag} {ip} {city} {proto}"
             results.append({"_name": name, "config": build_chain(e, x)})
 
     final = {"configs": [
         {"name": r["_name"], "config": r["config"]} for r in results
     ]}
-    with open(OUTPUT_FILE, "w", encoding="utf-8.dump(final, f, ensure_ascii=False, indent=2)
-    print(f"W configs -> {OUTPUT_FILE}")
+    with open(OUTPUT_FILE, "w", encoding="utf-8") as f:
+        json.dump(final, f, ensure_ascii=False, indent=2)
+    print(f"Wrote {len(results)} configs -> {OUTPUT_FILE}")
 
 if __name__ == "__main__":
     main()
