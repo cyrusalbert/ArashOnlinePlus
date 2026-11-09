@@ -2,10 +2,10 @@
 
 # 🌐 ArashOnline
 
-**Fresh, tested and ranked V2Ray / Xray subscriptions, rebuilt every 6 hours.**
+**Fresh, tested and ranked V2Ray / Xray subscriptions, rebuilt every 8 hours.**
 
 [![Update configs](https://github.com/cyrusalbert/ArashOnlinePlus/actions/workflows/update.yml/badge.svg)](https://github.com/cyrusalbert/ArashOnlinePlus/actions/workflows/update.yml)
-![Refresh](https://img.shields.io/badge/refresh-every%2024%20hours-red)
+![Refresh](https://img.shields.io/badge/refresh-every%208%20hours-red)
 ![Protocols](https://img.shields.io/badge/protocols-vmess%20%7C%20vless%20%7C%20trojan%20%7C%20ss%20%7C%20hysteria2-informational)
 
 </div>
